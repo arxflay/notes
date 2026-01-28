@@ -1,0 +1,6 @@
+
+ https://blog.netherlabs.nl/articles/2009/01/18/the-ultimate-so_linger-page-or-why-is-my-tcp-not-reliable
+* When data are sent via socket, kernel acknowledges, but data are not sent immediately, instead they are passed to many queues until they finally reach network adapter and being sent. And so, when `close` function is called, kernel immediately closes it and data could be lost. that but still allows.
+* There is option SO_LINGER for setsocketopt fn, that allows to wait before closing until all messages are sent, yet now **when client socket is closed, TCP RST is sent and some data are lost**
+	* This happens because after `close` call kernel should send TCP RST if some data are pending to sent, to show that some data are lost. So instead we explicitly should tell kernel to shutdown connection after sending all data. This can be achieved with `shutdown` fn.
+	* If some data are sent from server but client closed socket, TCP RST is also sent and some data are lost on server. **Client must read all data before closing** 
