@@ -1,6 +1,6 @@
 CDF - Cumulative distribution function - values that are less or equal to x. Distrubution are easily comparable compared to PMF
 
-![[Pasted image 20260418135917.png]]
+![[Pasted image 20260418135917.png|502]]
 
 **percentile rank** - fraction of values of total values that are smaller than value or equal to observed value. Other definition is values between 0 to 100% offseted by mean. Expressed in percentages. typical formula:
 $valuesBelowOrEqualToX/n * 100$

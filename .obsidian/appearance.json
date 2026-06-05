@@ -1,3 +1,6 @@
 {
-  "showRibbon": false
+  "showRibbon": false,
+  "textFontFamily": "",
+  "interfaceFontFamily": "",
+  "cssTheme": "Obsidian gruvbox"
 }

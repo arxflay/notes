@@ -1,0 +1,25 @@
+Unstructured task list
+- [ ] Read about https://man7.org/linux/man-pages/man2/fsync.2.html
+- [ ] Read about mamba
+- [ ] Read about ipykernel
+- [ ] Read about xeus tools 
+- [ ] Read about normal distributions, but from math perspective
+- [ ] dbus https://develop.kde.org/docs/features/d-bus/introduction_to_dbus/
+- [ ] visual studio memory profiling
+- [ ] SELinux
+- [ ] https://discord.com/channels/@me/1147934703375110154/1324507748276371496
+- [ ] Read QML Book
+- [ ] Learn How to work with qemu
+- [ ] Reverse proxy, proxy headers
+- [ ] https://pages.ably.com/hubfs/the-websocket-handbook.pdf
+- [ ] https://www.felixcloutier.com/x86/leave
+- [ ] https://en.wikipedia.org/wiki/X_macro
+- [ ] # Chronicler
+- [ ] https://www.youtube.com/watch?v=nAWoSc3gI9I
+- [ ] https://github.com/oatpp/oatpp
+- [ ] https://toml.io/en/
+- [ ] https://kdl.dev/
+- [ ] https://git-lfs.com/
+- [ ] https://www.knapickups.com/en/guitar/uke/ng-1-pickup-kna
+- [ ] data structure flattening https://www.cs.cornell.edu/~asampson/blog/flattening.html
+- [ ] utf-8 support winAPi https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page
