@@ -163,8 +163,9 @@ void main()
 
 ### Textures
 
-Texture - 2d image that wraps 3d object (textures however could be 3d - skybox, or 1d)
-Texture coordinates - coordinates from range 0.0 to 1.0, from bottom-left to top-right. where 0.5 is center. Most image loaders however store image from top-left, so flipping Y will be required
+Texture - nD image that wraps (n+1)D object. Texture could be 1d, 2d or even 3d (skybox). Wrapping 2d image around 3d object is named UV mapping
+
+Texture coordinates - coordinates from range 0.0 to 1.0, from bottom-left to top-right. where 0.5 is center. Most image loaders however store image from top-left, so flipping Y will be required. Texture components conventionally namepd are stpq (s = x, t = y) or uv (u = x, v = y)
 
 texel - texture pixel. final texture color is not exactly one to one mapping to pixels, it's mapping of floating value to image pixel value.
 
@@ -172,3 +173,9 @@ texture filtering - strategy how to determine color of pixel (texel).
 Strategies provided by OpenGL
 1. Nearest neighbor - picks nearest pixel that is pointed by floating point value. Results in visible pixels (GL_NEAREST_NEIGHBOR)
 2. Linear filtering - linear interpolation between nearest pixels. Results in blurry image (GL_LINEAR)
+
+texture wrapping - what to do if texture coordinates are bigger than 1.0.
+GL_REPEAT - repeats pattern (wallpaper)
+GL_MIRROR_REPEAT - repeats always mirrors pattern
+GL_CLAMP_TO_EDGE - draw image from 0.0 to 1.0, outside parts repeats the edge of object (imagine as image in center and around it edge is repeated to the end of image)
+GL_CLAMP_TO_BORDER - same as GL_CLAM_TO_EDGE, but we can specify color (via glClampColor) and this color will fill space outside of texture coordinates
