@@ -23,3 +23,6 @@ Unstructured task list
 - [ ] https://www.knapickups.com/en/guitar/uke/ng-1-pickup-kna
 - [ ] data structure flattening https://www.cs.cornell.edu/~asampson/blog/flattening.html
 - [ ] utf-8 support winAPi https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page
+- [ ] developer.mozilla.org/en-US/docs/Web/API/WebGL_API
+- [ ] xpath
+- [ ] SQL prepared statement

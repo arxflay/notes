@@ -88,7 +88,7 @@ Normalized coordinates - OpenGL doesn't use pixels, instead it uses normalized c
 
 VBO = VERTEX BUFFER OBJECT (GL_ARRAY_BUFFER, array of attributes) - unspecified data that are passed to vertex shader
 
-VAO = VERTEX ARRAY OBJECT - stores information about attributes, bound EBO, enabled attributes. Without it we had to specify VBO and attribute pointers manually for each drawing sequence
+VAO = VERTEX ARRAY OBJECT - stores information about attributes, bound EBO, enabled attributes. Without it we had to specify VBO and attribute pointers manually for each drawing sequence. Also stores EBO
 
 `glGenBuffer(count, bufferPtr)`- generate buffer with unspecified data
 `glBindBuffer(type, bufferHandle`) - bind bufferHandle as buffer for type `type`. To unbind buffer, pass bufferHandle with 0. Bound buffer will be used for related operations with it. `type` - type of object we want to bind, for example GL_ARRAY_BUFFER (vertex attribute array)
@@ -161,21 +161,85 @@ void main()
 
 `glDrawArrays` - drawing function that draws vertex arrays
 
+uniform - object that is accessible in all shaders (global) in single shader program. To write value to uniform you must retrieve location of named uniform (which is unique per shader program) in shader program via `glGetUniformLocation` and then set value via `glUniformX` fns. Before setting value you must bind shader program.
+
+EBO (GL_ELEMENT_ARRAY_BUFFER) - element object buffer, that contains indices of vertexes that have to be drawn (to reduce amount of vertex data). For example we can draw triangle from 6 vertices or we can use 4 vertices and specify 6 indices.
+`glDrawElements` - alternative draw function that uses EBO.
+
+`glPolygonMode(face, mode)` - determines how to draw polygons (objects that form closed polygonal chain, for example triangle). `face` determines for what polygons, front or/and back, should be applied mode. `face` value `GL_FRONT_AND_BACK` applies for both back and front mode
+modes:
+1. GL_FILL - default, fills closed space
+2. GL_LINE - draws only lines (wireframe)
+3. GL_POINT - draws only dots
+
+
 ### Textures
 
-Texture - nD image that wraps (n+1)D object. Texture could be 1d, 2d or even 3d (skybox). Wrapping 2d image around 3d object is named UV mapping
+Texture - nD image that wraps (n+1)D object. Texture could be 1d, 2d or even 3d. Wrapping 2d image around 3d object is named UV mapping
 
-Texture coordinates - coordinates from range 0.0 to 1.0, from bottom-left to top-right. where 0.5 is center. Most image loaders however store image from top-left, so flipping Y will be required. Texture components conventionally namepd are stpq (s = x, t = y) or uv (u = x, v = y)
+Texture coordinates - coordinates from range 0.0 to 1.0, from bottom-left to top-right. where 0.5 is center. Most image loaders however store image from top-left, so flipping Y will be required. Texture components conventionally named are stpq (s = x, t = y) or uv (u = x, v = y)
 
-texel - texture pixel. final texture color is not exactly one to one mapping to pixels, it's mapping of floating value to image pixel value.
+texel - texture pixel. final texture color is not exactly one to one mapping to pixels, it's mapping of floating value to image pixel value. `texture sampling` - retrieve color from texture using coordinates
 
 texture filtering - strategy how to determine color of pixel (texel).
 Strategies provided by OpenGL
-1. Nearest neighbor - picks nearest pixel that is pointed by floating point value. Results in visible pixels (GL_NEAREST_NEIGHBOR)
+1. Nearest neighbor - picks nearest pixel that is pointed by floating point value. Results in visible pixels (GL_NEAREST)
 2. Linear filtering - linear interpolation between nearest pixels. Results in blurry image (GL_LINEAR)
+
+Filters can be set for:
+1. Magnifying (GL_TEXTURE_MAG_FILTER) - when image is upscaled
+2. Min (GL_TEXTURE_MIN_FILTER) - when image is downscaled
 
 texture wrapping - what to do if texture coordinates are bigger than 1.0.
 GL_REPEAT - repeats pattern (wallpaper)
 GL_MIRROR_REPEAT - repeats always mirrors pattern
 GL_CLAMP_TO_EDGE - draw image from 0.0 to 1.0, outside parts repeats the edge of object (imagine as image in center and around it edge is repeated to the end of image)
 GL_CLAMP_TO_BORDER - same as GL_CLAM_TO_EDGE, but we can specify color (via glClampColor) and this color will fill space outside of texture coordinates
+
+`glGenTextures` - generates unspecified texture
+`glBindTexture` - similar to glBindBuffer, but TEXTURE_nD constants are passed
+
+mipmaps - sequence of images that are smaller then texture. Mipmaps are used to let OpenGL easily determine pixel color of distant object. OpenGL can generate mipmaps for us using fn `glGenMipmaps`. 
+
+Additional texture filters are available when mipmap is enabled in form `GL_<FILTER>_MIMAP_<FILTER2>` where FILTER and FILTER2 are one of two filters
+
+`glTexImage2D(target, level, internal_format, width, height, border, format, type, data` - sets 2D texture for target (2D_TEXTURE or CUBE_MAP). `level` is mipmap level (if we want to generate mipmaps manually), 0 is default level. `internal_format` is format of data. `border` is legacy parameter that should be always 0. `type` is length of single data element (GL_UNSIGNED_BYTE = 0 bytes)
+
+Texture unit (TMU) - part of GPU responsible for storing textures and performing operations on them
+
+To active specific texture unit, function `glActivateUnit(unitN)` is used, where unitN is unit we want to use (from 0 to 15). After activation, currently bound texture will be reset to lastly used texture. Generate you have to call `glActivateUnit` and then `BindTexture` 
+
+You can specify what texture unit must be used for sampler via `glUniformiv`
+
+typical texture flow
+```
+glActivateUnit - activate unit
+glGenTextures - get unspecified texture
+glBindTexture - bind TEXTURE_2D
+glTexImage2D - set texture data
+glUniformiv - to set what texture unit must be used by sampler2D
+```
+
+### Texture - shader
+
+texture sampler (glsl type `samplerND`) - texture stored in texture unit unit
+`texture(sampler, textureCoordinates)` - glsl function that retrieves texture pixel color
+`mix(a, b, percentage)` - linear interpolation between two vectors
+
+example fragment shader
+```glsl
+#version 330 core
+uniform sampler2D texture0;
+in vec2 texPos;
+out vec4 FragColor;
+void main()
+{
+	FragColor = texture(texture0, texPos);
+}
+```
+
+
+### Math
+
+
+
