@@ -50,3 +50,17 @@ subtended by Arc A
 ![[Pasted image 20260615192754.png|362]]
 Subtended by Arc B
 ![[Pasted image 20260615193034.png|362]]
+
+angle between two points in circle is defined as $\theta = s/r$ where s is arc length  and r is radius
+
+**pi** = ratio between circle perimeter (circumference) and diameter $\pi = C/d$ or $\pi = C/2r | *2$ 
+$2\pi = C/r$
+
+radians = radian is a angle measurement. Radian is defined the arc whose length is equals to the radius of the circle (for example 2rad = 2radiuses of the circle). If arc is equal to circumference, then angle will be $2\pi rad$ because if use formula to determine angle between two points and circumference formula, then
+$C = 2\pi r$
+$s = \theta *r$ | $2\pi r = \theta * r$ | $2\pi = \theta$ 
+from this formula we can determine angle of single radian. We know, that $\theta$ of full circle is 360, so $2\pi x = 360$ | x = $360 / 2\pi = 57.29\ degrees$
+
+![[Pasted image 20260610232634.png|467]]
+
+we know, that pi is 180, so we can convert radians to degrees by formula $rad * \dfrac{180}{pi}$
