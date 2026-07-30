@@ -26,3 +26,5 @@ Unstructured task list
 - [ ] developer.mozilla.org/en-US/docs/Web/API/WebGL_API
 - [ ] xpath
 - [ ] SQL prepared statement
+- [ ] Extend cross product derivation (using matrix determinant)
+- [ ] Fourier transformation and prerequisites - Calculus, Series/Sequences and Complex analysis

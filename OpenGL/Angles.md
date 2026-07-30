@@ -1,8 +1,8 @@
-supplementary angle = two angles make 180
+supplementary angle = two angles make 180 degrees
 
 ![[Pasted image 20260611212417.png|408]]
 
-complementary angle = two angles make 90
+complementary angle = two angles make 90 degrees
 
 ![[Pasted image 20260611212913.png|251]]
 
@@ -15,10 +15,10 @@ subtended angle - angle by which we can see object
 
 interior angle - angle inside shape
 exterior angle - angle outside of shape formed by extending side
-sum of exterior angles will always equal to 360 for all polygons
+sum of exterior angles will always equal to 360 degrees for all polygons
 
 sum of interior angles: $(n - 2) * 180$ where n is amount of sides. 
-It works because each polygon can be divided into triangles. For example square have 4 angles which must be 90. If we place two triangles inside, then because each triangle must contain sum of angles 180, we can prove, that $(n - 2) * 180$ will be equal to 4 triangles of 90 angle
+It works because each polygon can be divided into triangles. For example square have 4 angles which must be 90 degrees. If we place two triangles inside, then because each triangle must contain sum of angles 180, we can prove, that $(n - 2) * 180$ will be equal to 4 sides of 90 degrees angle
 
 tangent - line that touches circle in one point
 chord - line between two any points inside circle (but not outside)
@@ -38,7 +38,7 @@ Isosceles triangles have equal angles
 Sum of angles in triangle is equal to 180
 
 So $\alpha + (\alpha + \beta) + \beta = 180$ (third angle created on point A by bisection triangle is not important because we compute angles for the whole triangle)
-$\alpha + \beta = 180$
+$\alpha + \beta = 90$
 ![[Pasted image 20260614123212.png|444]]
 
 ### Subtended angle
@@ -63,4 +63,4 @@ from this formula we can determine angle of single radian. We know, that $\theta
 
 ![[Pasted image 20260610232634.png|467]]
 
-we know, that pi is 180, so we can convert radians to degrees by formula $rad * \dfrac{180}{pi}$
+we know, that pi is 180, so we can convert radians to degrees by formula $rad * \dfrac{180}{\pi}$

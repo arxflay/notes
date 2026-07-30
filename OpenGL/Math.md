@@ -1,41 +1,47 @@
-Square units (surface) - size of each size of square, for example square 5x5cm contains 25 squares (each have side length 1cm) or in another words, it's surface is $25cm^2$
 
-area of triangle = $\dfrac{b * h}{2}$ where b is base and h is shortest height to base
+### Linear algebra
 
-![[Pasted image 20260703153750.png|161]]
+#### Linear combination 
+Linear combinations is defined as sum of terms, where each term is multiplied by constant (some number). Term could be either variable, number or vector. Depending on context, linear combination is either the value or expression. Examples:
 
-### Chord intersection theorem
+1. $2x + y$ is a linear combination $ax + by$ where constant $a$ and $b$ are constant, $x$ and $y$ are terms
+2. $f(a) = 10a$, where $10$ is a term and $a$ is a constant
+3. $f(x) = x * cos(\theta)$, where $x$ is a constant and $cos(\theta)$ is term
+4. Vector space R^2, where i is (1, 0) and k (0, 1), thus any vector in R^2 space an be expressed as combination of two vectors (ai + bk), for example (1, 5) could be expressed as 1i + 5k
+5. Combination of polynomials, p1: $x$, p2: $x^2 - 20$, p3: $x^3$, which can be expressed as $ax + b(x^2 - 20) + cx^3$
 
-^00d4f6
+#### Linear dependence 
+Linear dependence means that at least one term in the set can be expressed as a linear combination of the other terms. Other way to define it is that exists constants (which are not all zero) that will make linear combination equal to 0.
 
-If two chord intersect and divide chord in two length: a and b for first chord and c and d for second chord, then $ab = cd$, e.g are of two rectangle that formed by divided chords are identical. The reason is that intersected chords form 2 triangles in point of intersection. Each triangle is similar triangle, because both angles are on same arc [[Angles#^8de587 |Subtended angle theorem]]. If we construct two triangles and compare them side by side, then it will form parallelogram
+Example of linear dependence:
+	Having vectors $p = (0, 1)$, $q = (1, 0)$, $r = (1/\sqrt{2}, 1/\sqrt{2})$, there exists combination $p + q + r = 0$ such as $q * (1/\sqrt{2}) + p * (1/\sqrt{2}) + -1 * r = 0$ and there exists combination of p and q that is equal to r, $q * 1/\sqrt{2} + p * 1/\sqrt{2} = r$ 
+
+Example of linear independence:
+	Having vectors $p = (0, 1)$, $q = (1, 0)$ there are no constants, that will make linear combination equal to 0 or equal to other term. Other example is $(-1,1)$ and $(1,1)$ or $(1, -1)$ and $(1,1)$
+
+#### Span and basis
+
+^fe779d
+
+Spanning set - subset of vectors S in vector space V, by which we can express all elements in that space via linear combination, $span(S) = V$. Spanning set doesn't necessary have to be finite or linear independent
+
+Linear span (span) - set formed by linear combination of spanning set. Span is subspace of vector space V when not all elements can be expressed by spanning set. For example, spanning set S $\{(1,0)\}$ and vector space $\mathbb{R}^2$, S is subspace of $\mathbb{R}^2$ because it's can't represent all elements in $\mathbb{R}^2$
+
+Basis - **spanning set of linear independent elements** of vector space V. For example, vector space $\mathbb{R}^3$ with canonical basis is $i=(1,0,0)$, $j=(0,1,0)$, $k=(0,0,1)$. Poorly chosen basis will span only subset of vector space.  ^bd3fba
+
+Rank - number of dimensions that can be described by basis. Rank is named full rank if it's possible to represent all elements in vector space by linear combination of basis
+
+Orthogonal basis - each vector is perpendicular to each other or in other words, for each component of vector in vector space V we need only one vector from spanning set. Example is ($i=(1,0)$, $j=(0,1)$)
+
+Orthonormal basis - all vectors in spanning set have unit length
 
 
-### Vectors
-
-difference of vectors can be imagined as vector coming the end of another vector. For example Having vector A and B, then A - B is vector coming from B to A
-
-![[Pasted image 20260615222419.png|208]]
-
-
-unit vector - vector with length 1.
-vector normalization - dividing vector by it's length to get unit vector. Direction will not change.
-
-Dot product (vector multiplication) has two related definitions. 
-1. Coordinate definition defines vector multiplication as sum of multiplication of vector components (imagine as matrix multiplication where result is 1x1 matrix).
-   $a*b = \sum_i a_i*b_i$ (vector components are not limited to 2). Coordinate definition is basically matrix multiplication 
-	$\begin{bmatrix} a_1 & a_2 \end{bmatrix} * \begin{bmatrix} b_1 \\ b_2 \end{bmatrix} = [a_1 * b_1 + a_2 * b_2]$ 
-2. Geometrical definition extends previous definition. sum of multiplication of vector components is equal to multiplication of vector lengths and angle between them. $a*b = ||a|| * ||b|| * cos(\phi)$, where $\phi$ is angle, $||a||$ and $||b||$ are lengths. If both vectors are unit vector, then $a*b$ = $cos(\phi)$, which is why unit vectors are useful
-Geometrical definition is used for finding angle between vectors
-dot product of vector itself is length squared $a*a = |a|^2$
-proof of geometrical definition (length of vector because we substitute vectors as sides but sides have length not direction):
-![[Pasted image 20260615225209.png]]
-[source](https://www.youtube.com/watch?v=afHTz7jrmGo)
+### Matrices
 
 for matrix multiplication to work, first matrix column count must equal to second matrix row count. Result of matrix multiplication has row count of first matrix and column count of second matrix ($m_1n_1*m_2n_2 = m_1n_2$, where m = rows, n = columns)
 $m1 = 1 x 2$
 $m2 = 2 x 3$
-$m3 = 1x3$
+$m_{1,2} = 1x3$
 $\begin{bmatrix} a_1 & a_2  \end{bmatrix} * \begin{bmatrix} b_1 & b_2 & b_3\\ b_4  & b_5 & b_6 \end{bmatrix} = \begin{bmatrix} a_1 * b_1 + a_2 * b_4 & a_1 * b_2 + a_2 * b_5 & a_1 * b_3 + a_2 * b_6   \end{bmatrix}$ 
 
 ### Interpolations
@@ -46,7 +52,12 @@ $\begin{bmatrix} a_1 & a_2  \end{bmatrix} * \begin{bmatrix} b_1 & b_2 & b_3\\ b_
 
 circle: $(x-m)^2 + (y-n)^2 = r^2$ or if S = 0, $x^2 + y^2 = r^2$
 
+line slope formula:  $tan(\theta) = \dfrac{y}{x}$, where y or x are either vector or line values 
 
+bounding box: box around object in two variants:
+1. two coordinates ($x_1, y_1$) $(x_2, y_2)$ (named xyxy) or single coordinate + width and height 
+   ![[Pasted image 20260724115028.png|265]]
+2. $c$ center and $a$ positional vector (oriented bounding box)
 
 ### Number theory
 
@@ -59,34 +70,38 @@ Rational numbers ($\mathbb{Q}$) - set of numbers represented by fraction
 Real numbers ($\mathbb{R}$) - set of numbers that can't be represented by fraction (endless sequence like $\pi$)
 
 Each set of numbers is subset of previous set (ex: natural numbers is subset of integers)
-### Cartesian coordinate system
 
-Cartesian coordinate system is named after latin version of surname of Rene Decrates
-Graph origin - center of graph, usually (0,0) for 2D or (0,0,0) for 3D, but it's up to us where will be center of graph, for example (1,1) will be also valid origin
-Graph axis - coordinate line that can be oriented whatever we want. By rotation or changing faces we can return to original coordinate system
-Plane - 2D surface. Analogue to point (0D), line (1D), or 3D.
-#### Cartesian 3D
-Naming of axis and direction of axis is not standardized in 3D. There are exactly two coordinate systems, left handed and right handed. They are named this way because they they can be represented by fingers of the hand. 
+### Group Theory
 
-Left handed: 
-* x+ - right
-* y+ - top
-* z+ - forward
+Additive identity - one element in group that will not change value of summand, $y + x = y$, for example 0 is additive identity for $\mathbb{R}$, $10 + 0 = 10$
 
-Right handed: 
-* x+ - left
-* y+ - right
-* z+ - forward
+Multiplicative identity - one element in group that will not change value of multiplicand, $y * x = y$, for example 1 is multiplicative identity for $\mathbb{R}$, $10 * 1 = 10$
 
-For consistency with 2D, x+ and z+ are usually inverted in right handed system, so x+ points to right and z+ points to backwards. Swapping (Negating) two axis will not change handiness (it's like rotation of original coordinate system by $180\textdegree$), but swapping direction of single axis will change handiness. 
+Additive inverse - element in group that is inverse to number, which when added results to 0, $y + (-y) = 0$, for example 10 + (-10) = 0
 
-![[Pasted image 20260624184944.png]]
+### Functions
+Norm - any function that defines distance of vector from origin with properties:
+* Is zero only in origin 
+* Must obey triangle inequality $f(x + y) <= x + y$ 
+* homogeneous - $f(s*x) = s * f(x)$, 
+* (optionally) non negative
 
-Rotation direction is different for each hand. To determine direction, point thumb axis you want to rotate from. Curled fingers will be the direction.
+common types:
+* P-norm - p norm is defined as ($\sum{x_i^p})^{1/p}$
+* Euclidean norm (2-norm, geometric length) - length of vector defined by $\sqrt{\sum{x_i^2}}$. Euclidean norm is subset of p norm. Proof of homogeneity - s = 2, $\vec{v} = (5, 2)$, $\sqrt{(5*2)^2 + (2*2)^2} = 2 * \sqrt{5^2 + 2^2}$, $\sqrt{10^2 + 4^2} = 2 * \sqrt{25 + 4}$, $\sqrt{100 + 16} = 2 * \sqrt{29}$, $\sqrt{116} = \sqrt{4 * 29}$, $\sqrt{116} = \sqrt{116}$
+* taxicab norm - $\sum{x_i}$, it measures distance like if we travel to x and then to y instead of shortest path via euclidean norm, for example $a = (1,1)$, length is $1 + 1$
+* chebyshev norm (infinity norm) - largest absolute value in vector
 
-![[Pasted image 20260624185222.png|442]]
-There are 24 positions for each hand, in total 48 possible combinations (imagine coordinates as cube, cube has in total 6 sides, we can spin each side 4 times, so $6*4=24$)
+### Rotation matrix
 
-3D object can be represented as multiple 2d planes
-![[Pasted image 20260624184915.png|418]]
+#### Rotation matrix 2d
 
+Formulae: $\begin{bmatrix} cos(\theta) & -sin(\theta) \\ sin(\theta) & cos(\theta)   \end{bmatrix}$
+
+Rotation matrix is derived from sum of angle with hypotenuse of length 1
+1. for x: $cos(\alpha + \beta) = cos(\alpha)cos(\beta) - sin(\alpha)sin(\beta)$, $sin(\alpha)$ = y (because $sin(\alpha) = opposite/hypotenuse$ and hypotenuse is 1, so $sin(\alpha) = opposite$) and $cos(\alpha) = x$, so $cos(\alpha + \beta) = x*cos(\beta) - y*sin(\beta)$
+2. for y: $sin(\alpha + \beta) = sin(\alpha)cos(\beta) + sin(\beta)cos(\alpha)$, $sin(\alpha)$ = y (because $sin(\alpha) = opposite/hypotenuse$ and hypotenuse is 1, so $sin(\alpha) = opposite$) and $cos(\alpha) = x$, $sin(\alpha + \beta) = y*cos(\beta) + x*sin(\beta)$ 
+
+#### Rotation matrix 3D
+
+Similar to 2d matrix, but rotation is along axis. Value of point on this axis will not be changed. Matrix is slightly different z

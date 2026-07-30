@@ -1,0 +1,1 @@
+model decomposed in hierarchy (A is part of B) is called **articulated model**

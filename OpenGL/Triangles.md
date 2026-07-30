@@ -136,7 +136,7 @@ visual proofs for sine and cosine ([using wikipedia article](https://en.wikipedi
 
 
 ### Triangle identities
-1. figure is not a triangle if one of the three sides is bigger than sum of two other sides
+1. Triangle inequality - figure is not a triangle if one of the three sides is bigger than sum of two other sides
 2. sum of angle of triangles must be always 180
 3. Law of sine
    $\dfrac{a}{sin(A)} = \dfrac{b}{sin(B)} = \dfrac{c}{sin(C)}$
