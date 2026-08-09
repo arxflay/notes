@@ -40,7 +40,7 @@ Dot product (vector multiplication) has two related definitions.
 	![[Pasted image 20260719214328.png|405]]
 	using this definition of dot product (which measures only parallel displacement) it's also possible to compute perpendicular vector and it's distance
 	$b = b_{parallel} + b_{perpendicular}$
-	$b_{parallel} = \dfrac{((a * b) a)}{||a||}$ (projected vector)
+	$b_{parallel} = \dfrac{(a * b)}{||a||}a$ (projected vector)
 	$b_{perpendicular} = b_{parallel} - b$
 	![[Pasted image 20260719180019.png|366]]
 	dot product of vector itself is length squared $a*a = |a|^2$, e.g projected vector is multiplied by it's length
@@ -103,7 +103,7 @@ Looking from positive axis in **left handed** system:
   ![[Pasted image 20260726164056.png|404]]
 rules become inverted if we will look from negative side, for if we are looking from negative -y, then clockwise became counterclockwise
 ![[Pasted image 20260726171318.png|377]]
-
+cross product of parallel vector is equal to 0
 
 cross products of each axis:
 $x = (1, 0, 0), y = (0, 1, 0), z = (0, 0, 1)$

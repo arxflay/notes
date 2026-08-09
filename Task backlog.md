@@ -1,8 +1,8 @@
 Unstructured task list
-- [ ] Read about https://man7.org/linux/man-pages/man2/fsync.2.html
-- [ ] Read about mamba
-- [ ] Read about ipykernel
-- [ ] Read about xeus tools 
+- [ ] https://man7.org/linux/man-pages/man2/fsync.2.html
+- [ ] mamba
+- [ ] ipykernel
+- [ ] xeus tools 
 - [ ] Read about normal distributions, but from math perspective
 - [ ] dbus https://develop.kde.org/docs/features/d-bus/introduction_to_dbus/
 - [ ] visual studio memory profiling
@@ -24,7 +24,14 @@ Unstructured task list
 - [ ] data structure flattening https://www.cs.cornell.edu/~asampson/blog/flattening.html
 - [ ] utf-8 support winAPi https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page
 - [ ] developer.mozilla.org/en-US/docs/Web/API/WebGL_API
-- [ ] xpath
+- [ ] WinAPI graphics and GUI API 
+- [ ] Wayland and x11 basics
+- [ ] Blender basics
+- [ ] xpath and xsd xml
 - [ ] SQL prepared statement
 - [ ] Extend cross product derivation (using matrix determinant)
 - [ ] Fourier transformation and prerequisites - Calculus, Series/Sequences and Complex analysis
+- [ ] Tensors
+- [ ] Linear algebra full course https://github.com/mitmath/1806/blob/master/notes/Introduction%20to%20Linear%20Algebra%206th%20edition%20and%20A%20%3D%20CR_04.pdf
+- [ ] XML DTD and https://stackoverflow.com/questions/6389741/including-a-dtd-in-another-dtd
+- [ ] Gcode https://s3.cnccookbook.com/Downloads/eBook/CNCCookbookGCodeCourse.pdf

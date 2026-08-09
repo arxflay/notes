@@ -1,0 +1,15 @@
+<!ELEMENT Content (Request)>
+<!ELEMENT Request (Header, Body, UserData*)>
+<!ELEMENT Body (#PCDATA)>
+<!ELEMENT Header (Type, SubType?, (Client | ClientInfo))>
+<!ELEMENT Type (#PCDATA)>
+<!ELEMENT SubType (#PCDATA)>
+<!ELEMENT Client (#PCDATA)>
+<!ELEMENT ClientInfo (#PCDATA)>
+
+<!ENTITY defaultBrowser "Chrome">
+<!ENTITY defaultBrowser "Chrome">
+
+<!ATTLIST Request product_name CDATA #REQUIRED>
+<!ATTLIST Request product_version ENTITIES #REQUIRED>
+<!ATTLIST Type version CDATA #FIXED "1">

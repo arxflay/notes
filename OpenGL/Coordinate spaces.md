@@ -16,20 +16,28 @@ For consistency with 2D, x+ and z+ are usually inverted in right handed system, 
 
 ![[Pasted image 20260624184944.png]]
 
-Rotation direction is different for each hand. To determine direction, point thumb axis you want to rotate from. Curled fingers will be the direction. For left handed, positive rotation is clockwise and for right is counterclockwise to positive end 
+Rotation direction is different for each hand. To determine direction, point thumb axis you want to rotate from. Curled fingers will be the direction. For left handed, positive rotation is clockwise and for right is counterclockwise to positive end  ^81e292
 
 ![[Pasted image 20260725143457.png|420]]
 There are 24 positions for each hand, in total 48 possible combinations (imagine coordinates as cube, cube has in total 6 sides, we can spin each side 4 times, so $6*4=24$)
 
-3D object can be represented as multiple planes. Plane is 2D surface. Analogue to point (0D), line (1D), or 3D.
+3D object can be represented as multiple planes. Plane is 2D surface, but in context of 3D, plane is a slice of 3D space. Typical planes are XY, XZ and YZ
 ![[Pasted image 20260624184915.png|418]]
-
-typical orientation in planes (used in rotations):
+but slice of 3D space (plane) is not required to be flat
+![[Pasted image 20260807164358.png|398]]
+Typical plane orientations for rotation (because they are used in transformations)
 * xy - x adjacent and y is opposite 
-* xz - y is adjacent and z is opposite 
-* yz - z is adjacent and x is opposite
-typical orientations for yz and xz can be derived from xy, because each coordinate axis must be adjacent and opposite only once 
+* xz - z is adjacent and x is opposite 
+* yz - y is adjacent and z is opposite
+reason: 
+1. rotation should remain clockwise or counter-counter clockwise depending on handiness and angle (positive/negative rotation)
+2. rotation should come from horizontal axis
 
+Example for xz (left handed):
+![[Pasted image 20260804194134.png|321]] 
+ but if we swap
+ ![[Pasted image 20260804195245.png|182]]
+then rotation comes from vertical axis and it's rotation not from 0 but from $1/2\pi$
 ## Different coordinate spaces
 Different coordinate spaces can be seen as different uses in different contexts. For example we have a table with phone on it and could ask a question "where exactly is the phone?". In world space, the answer will be GPS coordinates, but in space relative to table, the answer could be in the center of table. 
 

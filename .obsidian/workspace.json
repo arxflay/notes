@@ -8,27 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2646dc7fcb3d6f2e",
+            "id": "43d61651103c7f2e",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "OpenGL/3D Math Primer for Graphics and Game Development 2nd Edition.pdf"
+                "file": "OpenGL/Linear algebra.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "3D Math Primer for Graphics and Game Development 2nd Edition"
-            }
-          },
-          {
-            "id": "99e7db8d9ea296a2",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "OpenGL/3D Math Primer for Graphics and Game Development 2nd Edition.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "3D Math Primer for Graphics and Game Development 2nd Edition"
+              "icon": "lucide-file",
+              "title": "Linear algebra"
             }
           }
         ]
@@ -51,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -88,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 404.5
+    "width": 306.75
   },
   "right": {
     "id": "22bffbd2c9a7baba",
@@ -104,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OpenGL/3D Math Primer for Graphics and Game Development 2nd Edition.pdf",
+                "file": "OpenGL/Linear algebra.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +106,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 3D Math Primer for Graphics and Game Development 2nd Edition"
+              "title": "Backlinks"
             }
           },
           {
@@ -152,20 +144,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Links.md",
+                "file": "OpenGL/Linear algebra.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Links"
+              "title": "Outline"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 324.5
+    "width": 339.75
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,38 +171,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "2646dc7fcb3d6f2e",
+  "active": "202b3b14df2e033d",
   "lastOpenFiles": [
+    "Pasted image 20260809152715.png",
+    "Pasted image 20260809151201.png",
+    "OpenGL/Angles.md",
+    "OpenGL/Triangles.md",
+    "OpenGL/Linear algebra.md",
+    "Pasted image 20260809141959.png",
+    "Pasted image 20260809141518.png",
+    "Pasted image 20260808172406.png",
+    "Pasted image 20260808171354.png",
+    "Pasted image 20260808171337.png",
+    "OpenGL/learn_opengl.pdf",
+    "OpenGL/Math.md",
+    "OpenGL/Notes.md",
+    "OpenGL/Vectors.md",
+    "OpenGL/Planar geometry.md",
+    "OpenGL/3D Math Primer for Graphics and Game Development 2nd Edition.pdf",
+    "OpenGL/3D modeling.md",
+    "Task backlog.md",
+    "Pasted image 20260808125040.png",
+    "Pasted image 20260808125017.png",
+    "Pasted image 20260808122450.png",
+    "Pasted image 20260808122446.png",
+    "OpenGL/Derivation of 3D rotation matrix around arbitrary axis.md",
+    "OpenGL/Coordinate spaces.md",
+    "OpenGL/Blender52LTSManual.epub",
+    "xml/xml_with_ext_dtd.xml",
+    "xml/Common.md",
+    "xml/DTD.md",
+    "xml/schema.dtd",
+    "Csharp/Async.md",
+    "xml",
+    "Csharp/Keywords.md",
+    "Csharp",
     "blender_manual_v520_en.epub/video_editing/edit/montage/strips/transitions/wipe.xhtml",
     "blender_manual_v520_en.epub/video_editing/edit/montage/strips/transitions/sound_crossfade.xhtml",
     "blender_manual_v520_en.epub/video_editing/edit/montage/strips/transitions/index.xhtml",
-    "blender_manual_v520_en.epub/video_editing/edit/montage/strips/transitions/gamma_cross.xhtml",
-    "blender_manual_v520_en.epub/video_editing/edit/montage/strips/transitions/cross.xhtml",
-    "blender_manual_v520_en.epub/video_editing/edit/montage/strips/effects/subtract.xhtml",
-    "blender_manual_v520_en.epub/video_editing/edit/montage/strips/effects/speed_control.xhtml",
-    "blender_manual_v520_en.epub/video_editing/edit/montage/strips/effects/multiply.xhtml",
-    "blender_manual_v520_en.epub/video_editing/edit/montage/strips/effects/multicam.xhtml",
-    "blender_manual_v520_en.epub/video_editing/edit/montage/strips/effects/index.xhtml",
-    "blender_manual_v520_en.epub/video_editing/edit/montage/strips/effects/glow.xhtml",
-    "blender_manual_v520_en.epub/_static/fonts/bl-icons.symbol.svg",
-    "blender_manual_v520_en.epub/_static/fonts/bl-icons.svg",
-    "blender_manual_v520_en.epub/_static/plus.png",
-    "blender_manual_v520_en.epub/_static/minus.png",
-    "blender_manual_v520_en.epub/_static/file.png",
-    "blender_manual_v520_en.epub/_static/favicon.png",
-    "blender_manual_v520_en.epub/_static/cover.png",
-    "blender_manual_v520_en.epub/_static/copy-button.svg",
-    "blender_manual_v520_en.epub/_static/check-solid.svg",
-    "blender_manual_v520_en.epub/_static/blender-logo.svg",
-    "OpenGL/Coordinate spaces.md",
-    "OpenGL/Math.md",
-    "OpenGL/Notes.md",
-    "OpenGL/Angles.md",
-    "OpenGL/3D modeling.md",
-    "OpenGL/Vectors.md",
-    "OpenGL/Triangles.md",
-    "OpenGL/Planar geometry.md",
-    "Task backlog.md",
     "OpenGL/Trigonometry and related.md",
     "Angles^inters.md",
     "AI/chatgpt_llm_learning_path.md",
@@ -221,12 +220,6 @@
     "Bez názvu.md",
     "Links.md",
     "AI/The Transformer.md",
-    "Git.md",
-    "Electricity.md",
-    "Things to learn.md",
-    "AI/Statistics/notes.md",
-    "AI/Statistics/CDF.md",
-    "AI/Statistics/PMF.md",
     "Dashboard.canvas"
   ]
 }
