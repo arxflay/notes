@@ -1,4 +1,5 @@
 i.obsidian/workspace.json
-mastering-stm32*
-learn_opengl.pdf
-thinkstats2.pdf
+*.pdf
+*.epub
+.trash
+

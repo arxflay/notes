@@ -2,5 +2,6 @@
   "showRibbon": false,
   "textFontFamily": "",
   "interfaceFontFamily": "",
-  "cssTheme": "Obsidian gruvbox"
+  "cssTheme": "Obsidian gruvbox",
+  "monospaceFontFamily": "FiraCode Nerd Font Mono"
 }

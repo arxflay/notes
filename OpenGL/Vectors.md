@@ -57,8 +57,13 @@ Dot product (vector multiplication) has two related definitions.
    This definition can be also derived from cosine law
 	![[Pasted image 20260615225209.png]]
 	[source](https://www.youtube.com/watch?v=afHTz7jrmGo)
-	
-dot product is commutative and distributes over addition and subtraction ($a * (b + c) = a * b + a * c$)
+
+dot product properties:
+1. commutative 
+2. distributive
+3. dot product is $\le |a| * |b|$
+
+
 ### Direction cosines 
 Direction cosines can applied only in 3D and are derived from Dot product. They are used to determine how close vector points to axis using unit vector with 1 component as base in degree range $<0, 180>$, where $0\textdegree$ is vector parallel to axis having all components equal to $0$, $90\textdegree$ is vector with axis component equal to $0$ and $180\textdegree$. Angle can't be less than $90\textdegree$ if vector points to opposite direction relative to axis and can't be less than $0\textdegree$ if it points to positive direction. Moving unrelated components further in any direction will decrease angle relative to axis. 
 * $cos (\alpha) = \dfrac{a * i}{||a||}$ ; $i = (1, 0, 0)$ angle relative to x axis 
@@ -77,16 +82,18 @@ Direction cosines identities:
 
 ## Cross product
 Cross product is a vector that is perpendicular to both vectors. Can be applied only in 3D. Extensively used to determine normal vector, sign of angle between two vectors or direction of rotation.
-cross product is not commutative $a \times b = -(b \times a)$
+
+Cross product properties:
+1. anti commutative 
+2. distributive
 
 formulae which is derived using determinant
 $\begin{bmatrix} y_1*z_2 - z_1 * y_2 \\ z_1*x_2 - x_1*z_2 \\ x_1*y_2 - y_1*x_2  \end{bmatrix}$
 
 Length of perpendicular vector is equal to $||a \times b|| = ||a||\ ||b||sin(\theta)$, which is also equal to area of parallelogram $(b * h)$
 so we can modify formulae $b = ||a||$, $h = ||b||  sin(\theta)$ and get $||a||\ ||b||sin(\theta)$
-
 ![[Pasted image 20260723191058.png|325]]
-
+It can also be computed via absolute value of determinant of matrix, since vector $a$ and $b$ can be interpreted as basis 
 
 There are two directions which $a \times b$ can be perpendicular, whatever we make clockwise or counterclockwise turn can be determined by placing vector $b$ at the end. Axis from what we are looking matters (what axis looks backwards), because it defines which way is clockwise and counterclockwise. Sign of cross product can determine if rotation is clockwise or counterclockwise
 

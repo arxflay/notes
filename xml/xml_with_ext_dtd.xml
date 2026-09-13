@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Content SYSTEM "schema.dtd">
+<Content>
+	<Request product_name="Test" product_version="&rx;">
+		<Header>
+			<Type version="1">TypeA</Type>
+			<SubType>Test</SubType>
+			<ClientInfo><![CDATA[<tag attr="value"></tag>]]>&defaultBrowser;</ClientInfo>
+		</Header>
+		<Body />
+	</Request>
+</Content>

@@ -52,6 +52,13 @@ Unit circle - circle with radius 1, which is used to describe trigonometric func
 
 basic trigonometric functions graphs (y is $\cos$ and x is $\sin$): 
 ![[Pasted image 20260620123440.png|520]]
+
+Precise visualization of trigonometric functions on triangle (sec is line from A to D)
+![[Pasted image 20260910163343.png|354]]
+
+Another visualization using tangent to point at curve
+![[Pasted image 20260910163755.png|363]]
+
 Angles for each quadrant (can be proved by angle of intersecting lines):
 1. $\theta$
 2. $\pi - \theta$
@@ -61,6 +68,8 @@ Angles for each quadrant (can be proved by angle of intersecting lines):
 
 reverse functions graphs:
 ![[Pasted image 20260620154550.png|504]]
+
+
 ### Trigonometric identities (right triangle axioms)
 #### Uncategorized identities
 1. $tan(\theta) = \dfrac{sin(\theta)}{cos(\theta)}$
@@ -74,7 +83,7 @@ reverse functions graphs:
 1. $sin^2(\theta) + cos^2(\theta) = 1$ 
    derived from Pythagoras theorem. $a^2 + b^2 = c^2$ divide both sides by $c^2$ $\dfrac{a^2}{c^2} \dfrac{b^2}{c^2} = \dfrac{c^2}{c^2}$ simplify $(\dfrac{a}{c})^2 + (\dfrac{b}{c})^2 = 1$ replace ratios with trigonometric functions $sin^2(\theta) + cos^2(\theta) = 1$
 2. $tan^2(\theta) = sec^2(\theta) - 1$
-   This formula is derived from previous formula by division by $cos^2(\theta)$ $\dfrac{sin^2(\theta)}{cos^2(\theta)} + 1 = \dfrac{1}{cos^2(\theta)}$ simplify $tan^2(\theta) + 1 = sec^2(\theta)$
+   This formula is derived from previous formula dividing whole formula with $cos^2(\theta)$ - $\dfrac{sin^2(\theta)}{cos^2(\theta)} + 1 = \dfrac{1}{cos^2(\theta)}$ simplify $tan^2(\theta) + 1 = sec^2(\theta)$
 3. $cot^2(\theta) = csc^2(\theta) - 1$ 
    similar to previous formula, but derived by division by $sin^2(\theta)$
 
@@ -132,9 +141,11 @@ visual proofs for sine and cosine ([using wikipedia article](https://en.wikipedi
    $\tan(\dfrac{a}{2}) = \pm \sqrt{\dfrac{\dfrac{1 - cos(\alpha)}{2}}{\dfrac{1 + cos(\alpha)}{2}}}$ simplify $\tan(\dfrac{a}{2}) = \pm \sqrt{{\dfrac{1 - cos(\alpha)}{\cancel{2}}} * \dfrac{\cancel{2}}{1 + cos(\alpha)}}$ result $\tan(\dfrac{a}{2}) = \pm \sqrt{\dfrac{1 - cos(\alpha)}{1 + cos(\alpha)}}$
 
 
-
-
-
+#### Inequalties
+If we have angle in radians and $|\theta|$ is length of arc, then
+1. $-|\theta| \le sin(\theta) \le |\theta|$
+2. $-|\theta| \le 1 - cos(\theta) \le |\theta|$
+![[Pasted image 20260820141231.png|268]]
 ### Triangle identities
 1. Triangle inequality - figure is not a triangle if one of the three sides is bigger than sum of two other sides
 2. sum of angle of triangles must be always 180

@@ -62,5 +62,6 @@ $s = \theta *r$ | $2\pi r = \theta * r$ | $2\pi = \theta$
 from this formula we can determine angle of single radian. We know, that $\theta$ of full circle is 360, so $2\pi x = 360$ | x = $360 / 2\pi = 57.29\ degrees$
 
 ![[Pasted image 20260610232634.png|467]]
-
 we know, that pi is 180, so we can convert radians to degrees by formula $rad * \dfrac{180}{\pi}$
+Radian can be approximated by creating circle of radius $r$ at right end of the circle from center, finding intersection and then bisecting from left a few times
+![[Pasted image 20260823135857.png|310]]

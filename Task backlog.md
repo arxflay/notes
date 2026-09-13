@@ -29,9 +29,13 @@ Unstructured task list
 - [ ] Blender basics
 - [ ] xpath and xsd xml
 - [ ] SQL prepared statement
-- [ ] Extend cross product derivation (using matrix determinant)
 - [ ] Fourier transformation and prerequisites - Calculus, Series/Sequences and Complex analysis
 - [ ] Tensors
 - [ ] Linear algebra full course https://github.com/mitmath/1806/blob/master/notes/Introduction%20to%20Linear%20Algebra%206th%20edition%20and%20A%20%3D%20CR_04.pdf
 - [ ] XML DTD and https://stackoverflow.com/questions/6389741/including-a-dtd-in-another-dtd
 - [ ] Gcode https://s3.cnccookbook.com/Downloads/eBook/CNCCookbookGCodeCourse.pdf
+- [ ] https://en.wikipedia.org/wiki/Laplace_expansion
+- [ ] https://en.wikipedia.org/wiki/Alternating_series
+- [ ] https://github.com/opencontainers/image-spec
+- [ ] Cramers rule
+- [ ] https://github.com/openagents-org/openagents

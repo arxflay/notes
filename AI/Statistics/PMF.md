@@ -7,10 +7,6 @@ Unbiasing data - divide by 1/value
 
 ![[Pasted image 20260411161817.png|533]]
 
-piecewise function - function that is separated to multiple intervals, e.g  changes depending on interval value
-
-![[Pasted image 20260411144107.png|381]]
-
 step function - part of piecewise functions, but changes look like steps
 
 ![[step_fn_example.png|439]]

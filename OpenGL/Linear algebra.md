@@ -46,6 +46,7 @@ Matrix is mathematical structure, where elements arranged in rows and columns. M
 - **Diagonal matrix**: square matrix, that has numbers non zero numbers only on diagonal. Transpose doesn't affect matrix, $D = D^T = D$
   $D = \begin{bmatrix} 4 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}$
 - **Identity matrix**: special case of diagonal matrix, that has all 1 on diagonal. Matrix multiplied by this matrix is not changed. This matrix is like number 1 when multiplying scalars. Identity matrix is denoted as I with size under it, example: $I_3 = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$
+- **Triangular matrix**: square matrix, where all numbers under diagonal are zero (**upper triangular**) or all numbers above diagonal are zero (**lower triangular**)
 - **Vector**: technically vector is one dimensional a matrix. Vectors exists in two types - column $\begin{bmatrix} x \\ y \\ z \end{bmatrix}$ or row vectors $\begin{bmatrix} x & y & z \end{bmatrix}$, they are not same from matrix perspective
 ### Matrix basic operations
 
@@ -60,6 +61,7 @@ Matrix is mathematical structure, where elements arranged in rows and columns. M
 	$\begin{bmatrix}  1 & 2 \\ \color{yellow} 3 & \color{yellow} 4 \\ 5 & 6 \end{bmatrix} * \begin{bmatrix} \color{yellow} 4 & 4 \\ \color{yellow} 5 & 5 \end{bmatrix} = \begin{bmatrix} 14 & .. \\ 3 *4 + 4 * 5 & .. \\ .. & .. \end{bmatrix} = \begin{bmatrix} 14 & .. \\ 32 & .. \\ .. & .. \end{bmatrix}$
 	next column example:
 	$\begin{bmatrix}  \color{yellow} 1 & \color{yellow} 2 \\ 3 & 4 \\ 5 & 6 \end{bmatrix} * \begin{bmatrix} 4 & \color{yellow} 4 \\ 5 &  \color{yellow} 5 \end{bmatrix} = \begin{bmatrix} 14 & 1 * 4 + 2 * 5 \\ 32 & .. \\ .. & .. \end{bmatrix} = \begin{bmatrix} 14 & 14 \\ 32 & .. \\ .. & .. \end{bmatrix}$
+	Basically we are computing dot product for each combination of row vector and column vector.
 	Matrix multiplication with vector be interpreted as linear combination of vector. If we took canon basis for $V^n$ we can decompose matrix columns (or rows, we multiplying with row vector) as it was basis vectors.
 	column vector ($\begin{bmatrix} p & q & r \end{bmatrix}$):
         $x$     $y$     $z$
@@ -80,6 +82,68 @@ Matrix is mathematical structure, where elements arranged in rows and columns. M
 	properties:
 	   1. $(AB)^T = B^TA^T$, $(M_1*M_2...M_n)^T = M_n^T ... M_2^T * M_1^T$
 
+### Matrix determinant
+
+Determinant of the matrix is a special scalar(number) that characterizes properties of the matrix. Determinant can be computed only for square matrix and is denoted as $|M|$ or $det\ M$.
+
+**Minor of matrix**: determinant of submatrix that has been formed by removing one row and one column from original matrix. Denoted as $M^{\{ij\}}$, where $i$ is number of removed row and $j$ is number of removed column
+
+**Matrix cofactor**: cofactor is minor of matrix multiplied with $-1^{ij}$, where $i$ is row number and $j$ is column number. Formulae is $-1^{ij} * M^{\{ij\}}$, for example $M^{\{12\}} * -1^{1*2} = -M^{\{12\}}$
+
+There are multiple ways to compute determinant matrix depending on size of matrix. When computing matrix, brackets are replaced with vertical lines
+1. *For $1 \times 1$ matrix*: determinant is equal to matrix itself (scalar)
+2. **For $2 \times 2$ matrix**: product of scalars on left diagonal subtracted by product of scalars on right diagonal
+3. **For $3 \times 3$ matrix**: computation is similar to $2 \times 2$ by using Sarrus rule, which is special mnemonic, where matrix is extended by two rows. Compute 3 products of left diagonal by moving one row down after each computation. The same way are computed 3 products of right diagonal. Subtract 3 products of left diagonal with 3 products of right diagonal.
+4. *For any matrix $(n\times n)$*: Computed as sum of matrix cofactors (Laplace expansion), where amount of cofactors is equal to $n$. Cofactors are computed for either minors, where $j$ is always 1 and i is range from 1 to $n$ or other way around.
+
+![[Pasted image 20260812210945.png|449]]
+
+Determinant of 2 vectors (2D matrix) is equal to the area of parallelogram, determinant of 3 vectors (3D matrix) is equal to the volume of parallelepiped   
+
+Matrix determinant properties:
+1. Asociativity  $|AB| = |A| * |B|$
+2. Determinant of identity matrix is always 1
+   $\begin{vmatrix} 1 & 0 \\ 0 & 1 \end{vmatrix} = 1 * 1 - 0 * 0 = 1$
+3. If any row or column have only 0, then matrix determinant is equal to 0
+   $\begin{vmatrix} 1 & 0 \\ 2 & 0 \end{vmatrix} = \begin{vmatrix} 1 & 2 \\ 0 & 0 \end{vmatrix} = 1 * 0 - 2 * 0 = 0$
+4. Transpose doesn't affect matrix determinant
+   $\begin{vmatrix} 1 & 2 \\ 3 & 4 \end{vmatrix} = \begin{vmatrix} 1 & 3 \\ 2 & 4 \end{vmatrix}^T = 4 - 6 = -2$
+5. Multiplying any whole row or column multiplies determinant
+   $k = 5$, $\begin{vmatrix} 1k & 2k \\ 3 & 4 \end{vmatrix} = \begin{vmatrix} 1 & 2 \\ 3k & 4k \end{vmatrix} = 20 - 30 = -10 = -2k$
+6. Single unique exchange of any whole row or column negates determinant
+   $\begin{vmatrix} 1 & 2 \\ 3 & 4 \end{vmatrix}$, $\begin{vmatrix} 2 & 1 \\ 4 & 3 \end{vmatrix} = 6 - 4 = 2$, but another exchange changes value $\begin{vmatrix} 4 & 1 \\ 2 & 3 \end{vmatrix} = 12 - 2 = 10$
+7. Adding multiple of one row or column doesn't change value of determinant
+   $\begin{vmatrix} 1 & 2 \\ 3 & 4 \end{vmatrix} = \begin{vmatrix} 1 + 3 & 2 + 4 \\ 3 & 4 \end{vmatrix} = 4 * 4 - (6 * 3) = 16 - 18 = -2$
+
+### Matrix inverse
+
+Matrix inverse of matrix is matrix that undoes linear transformation performed by matrix. Not all have inverse, these who do have <u>non zero determinant</u> and are named **nonsignular**, where as matrices without inverse are named **singular**.
+
+There are multiple ways to compute matrix inverse, the simplest is via **Classical adjoint** matrix
+**Classical adjoint (adjugate) matrix**: is transposed matrix formed from cofactors. Denoted as $adj\ M$
+Example: $adj\ M=\begin{vmatrix} 1 & 2 \\ 3 & 4 \end{vmatrix} = \begin{vmatrix} C^{11} & C^{12} \\ C^{21} & C^{22} \end{vmatrix}^T = \begin{vmatrix} 3 & 2 \\ 4 & 1 \end{vmatrix}^T = \begin{vmatrix} 3 & 4 \\ 2 & 1 \end{vmatrix}$
+
+adjoint matrix is then divided my determinant of original matrix giving us inverse of matrix. Formulae is $M^{-1} = \dfrac{adj\ M}{|M|}$ by which we can conclude, that matrices with zero determinant doesn't have inverse since division by zero is undefined.
+Example: $|M| = 1 * 4 - 2 * 3 = -2$, $\begin{vmatrix} 3 & 4 \\ 2 & 1 \end{vmatrix} / -2 = \begin{vmatrix} -3/2 & -2 \\ -1 & -1/2 \end{vmatrix}$
+
+Matrix inverse properties:
+1. Inverse of matrix product is equal product of matrix inverses in reverse order $(AB)^{-1} = B^{-1}A^{-1}$
+2. Inverse of identity matrix is identity matrix itself $I^-1 = I$ (exists other matrices that are inverse of themselves)
+
+
+## Classes of transformations:
+
+1. **Linear transformations**:  Transformations, where
+	1. $F(a+b)=F(a) + F(b)$
+	2. $kF(a) = F(ka)$
+	3. $F (0) = a$ and $a$ = 0
+	4. Is a transformation accomplished with matrix multiplication $F(a + b) = (a+b)M = aM + bM$, where $M$ is a square matrix
+	if some conditions are not met, then it's not a linear transformation.
+2. **Affine transformations**: linear transformation, that is followed by translation. Every transformation that has form $v' = vM + b$ is affine transformation. All linear transformations are affine transformations, because $b$ could be equal to zero, but if $b$ is non zero vector, then it's affine transformation and not linear
+3. **Invertible transformation**: transformation, for which exists matrix, that undoes transformation (matrix inverse) $F^{-1}(F(a)) = a$. All transformations except projection are invertable 
+4. **Angle preserving transformations**: transformation, where are angles between two vectors (points) are preserved. *Translation*, *uniform scale* and *rotation* are angle preserving. <u>Reflection is not angle preserving</u>, since sign could be inverted
+5. **Orthogonal transformations**: transformation, whose rows form orthogonal basis. Each row is basis vector, which is perpendicular to each other and have unit length. This transformation preserves area and volume and preserves magnitude of angle (but not strictly sign). *Reflection*, *translation* and *rotation* are orthogonal transformations.  
+6. **Rigid body transformations**: transformations, which preserves angle, changes orientation, but not shape (The most restrictive class). *Translation* and *rotation* are the only transformations that are rigid body. Rigid body transformations are also known as proper transformations. 
 ## Linear transformations
 Liner transformations are transformations that transform vector using matrices. Linear transformations are based on linear combination (since vector can be represented as linear combination)
 ### Basic transformations
