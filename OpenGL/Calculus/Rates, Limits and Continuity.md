@@ -64,7 +64,7 @@ $|f(x) - L| < \epsilon$ for $c - \delta  < x < c$ for right limit, read as for e
 If exists limit at point $c$ from left and right, then at point $c$ exists limit
 
 **Theorem limit of the ratio $sin(\theta) / \theta$ as $\theta \to 0$**:
-$lim_{x \to 0} {\dfrac{sin(\theta)}{\theta}} = 1$. Proved by sandwich theorem by constructing triangle on unit circle with angle equals to 1 rad and computing Area $\triangle ABC$ <  Area of sector $ABC$ < Area $\triangle ABD$
+$lim_{\theta  \to 0} {\dfrac{sin(\theta)}{\theta}} = 1$. Proved by sandwich theorem by constructing triangle on unit circle with angle equals to 1 rad and computing Area $\triangle ABC$ <  Area of sector $ABC$ < Area $\triangle ABD$
 ![[Pasted image 20260823160412.png|226]]
 $S_{\triangle ABC} = \dfrac{1}{2} * sin(\theta) * 1 = \dfrac{\sin{\theta}}{2}$
 $S_{sector\ ABC} = \dfrac{\theta * r^2}{2} = \dfrac{\theta}{2}$

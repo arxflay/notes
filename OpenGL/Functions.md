@@ -29,6 +29,8 @@ Common types of functions:
 - **Trigonometric**
 - **Transcendental**: Functions that can't be expressed as algebraic function such as trigonometric functions
 
+**Monotonic function** is function that is keep increasing or decreasing, for example $y=x$ or $y = -x$
+
 **Combining function**: Function can be algebraically combined. Domain ($D$) is reduced to intersection of domains of both function.
 Examples where $f(x) = x$ and $g(x) = 1/x$, $D(x)$ for is $f(x)$ is $(-\infty, \infty)$, $D(x)$ for is $g(x)$ is $(-\infty, 0)\ U\ (0, \infty)$
 1. $f(x) + g(x)$ if $x$ is defined in $D(x)$ for $f(x)$ and $g(x)$
@@ -43,7 +45,9 @@ Examples where $f(x) = x$ and $g(x) = 1/x$, $D(x)$ for is $f(x)$ is $(-\infty, \
 * if function input is multiplied by $k > 1$, graph becomes compressed by $x$. Multiplying by $k$ in $(0, 1)$ will stretched graph by x
 * if function is multiplied by minus one $-1 *f(x)$, graph is reflected by y. If the input of function is multiplied by one $f(-1*x)$, graph is reflected by x
 
-**Shifting graph**: graph can be shifted in $y$ and $x$ direction. Adding constant to $f(x)$ shift graph by $x$, positive constant shifts to left, negative to right. Adding constant to function input shifts graph by $y$, positive constant shift to up, negative to down.
+**Shifting graph**: graph can be shifted in $y$ and $x$ direction. 
+1. **Shift $y$ of graph**: adding constant such as $y = f(x) + k$ shift $y$ of graph by $k$, where positive $k$ shifts graph up and negative $k$ shifts graph down.
+2. **Shift $x$ of graph**: adding constant to function input such as $f(x + k)$ shifts $x$ of graph by $k$, where positive $k$ shifts graph to right and negative $k$ shifts graph to left.
 
 **Periodic function**: Function that repeats itself by adding period $p$. **Period** is the smallest possible number by adding which function repeats itself. Example is trigonometric function, where $p$ is $2\pi$, $sin(x + p) = sin(x + 2\pi) = sin(x)$
 

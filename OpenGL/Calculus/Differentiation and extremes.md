@@ -132,3 +132,87 @@ $\Delta y - df = f(a + x) - f(a) - f'(a)\Delta x = (\dfrac{f(a + x) - f(a)}{\Del
 Using this notation, we can compute $\Delta y$ as $f'(a) + \epsilon \Delta x$, which can be used to prove chain rule. 
 
 **Sensitivity to change** of $df = f'(x)dx$ tells how much is function sensitive to effect of an error for large $x$. The bigger change of $df$ for same $dx$, the more estimate is affected by an error.
+
+#### Extremes
+**Extremes** are absolute (global) maxima and minima of function $f$ with domain $D$.  Extremes are defined as value at point $c$ for all $x$ in domain $D$ including $c$, where maximum is  $f(x) \le f(c)$ and minimum is  $f(x) \ge f(c)$. If domain of function is unbound or function is not contineous for all $x$ in domain $D$, it could fail to have a extreme. Extremes are very useful when we want to solve optimization problem, for example finding smallest area of 1 liter tin can to reduce production cost.
+
+**Theorem of closed interval extremes**: Contineous function in closed interval $[a, b]$ always have maximum $M$ where $f(x) \le M$ and minimum $m$ where$f(x) \ge m$ for all $x$ in closed interval $[a,b]$
+
+**Local extremes** are local maxima or minima at point interior point $c$ that for all $x$ in $D$ including $c$ are either $f(c) \ge f(x)$ (maxima) or $f(c) \le f(x)$ (minima) in some interval. Global extremes are also a local extremes.
+Example of local extremes of function $cos(x)$ with domain $(-\infty, \infty)$ in interval $<-\pi/2, \pi/2>$ are local minimum $0$ and  local maximum $1$
+![[Pasted image 20260914224149.png|371]]
+
+**Theorem of first derivate for local extremes**: if there is interior point $c$ which is local maximum or minimum, then it's derivation $f'(c)$ is equal $0$
+
+Extremes could existing in:
+1. interior points where $f'(x)$ is equal to zero, 
+2. end points of domain
+3. point, where derivation is not defined.
+Interior points, where $f'(x)$ is zero or derivation is not defined are called **critical points**, however not all critical points are are local extremes. For example, function $x^3$ with derivation $3x^2$ has $f'(x) =0$ at $x=0$, but it's not an extreme. function $x^{1/3}$ with derivation $\dfrac{1}{3x^{2/3}}$ is not defined at $0$ but it's also not an extreme. 
+![[Pasted image 20260915161352.png|257]] ![[Pasted image 20260915161500.png|261]]
+
+**Rolles theorem**: if there is a two points, $a$ and $b$, which $f(a) = f(b)$, e.g there is horizontal line between them, then there in $(a,b)$ is at least one point $c$ which derivation is equal to $0$
+
+**Mean value theorem**: if we have function f and two points, $a$ and $b$, which form secant, and is differentiaable on interval $(a, b)$ then there is at least one point $c$, which has same slope as secant, e.g $\dfrac{f(b) - f(a)}{b - a} = f'(c)$
+This could be proved by rolles theorem. Having secant function $g(x) = f(a) + \dfrac{f(b) - f(a)}{b - a}(x - a)$, vertical difference between $f$ and $g$ at $x$ are $h(x) = f(x) - g(x) = f(x) - f(a) - \dfrac{f(b) - f(a)}{b - a}(x - a)$.  If create diagram of $h(x)$, it will form a function with two points, $a$ and $b$, which have same $y$ value. Rolles theorem tells us, that there is some point, where $h'(c)$ is equal $0$. By derivation of both sides of function $h'(x)$, we will get $h'(x) = f'(x) - \dfrac{f(b) - f(a)}{b - a}$ (notes: we are deriving in respect of $x$, so $a$, $f(a)$ and $f(b)$ are constants). Then we set $x$ to $c$, $0 = f'(c) - \dfrac{f(b) - f(a)}{b - a}$ and so $f'(c) = \dfrac{f(b) - f(a)}{b - a}$
+![[Pasted image 20260915170200.png|409]]
+
+Mean value theorem consequences:
+1. Only constant function have zero derivatives over interval, since $\dfrac{f(b) - f(a)}{b - a}$ will be always zero, so $f'(c) = 0$
+2. If function have same non zero derivatives over it's interval as other function, $g'(x) = f'(x)$, then there is $C$ such that $f(x) = g(x) + C$, e.g $h(x) = f(x) - g(x) = C$, which aligns with first consequence, since derivation of constant function is $0$, then $h'(x) = f'(x) - g'(x) = f'(x) - f'(x) = 0$.
+3. If derivation $f'(x)$ of contineous function $f$  doesn't change signess over interval $(a,b)$, then function is either increasing if derivation is positive ($f'(x) > 0$ for all points in $(a,b)$) or negative ($f'(x) < 0$ for all points in $(a,b)$). Such function $f$  over interval $(a,b)$ is called **monotonic** over interval.
+
+<u>Critical point has an local extreme</u> if derivation of function $f$ at any point of interval before critical point changes signess at any point of interval after critical point, otherwise critical point is not an local extreme. By checking point before critical point and after critical points, we are performing **first derivate test** to determine if critical point is an local extreme.
+1. If derivation of function $f$ at point before critical point negative and after is positive, then it's **local minimum**. For example function $f(x) = x^2$ with derivation $f'(x) = 2x$ has critical point at $x=0$ and forming two intervals,  $(-\infty, 0)\cup(0,\infty)$. The function derivation is negative for any point at $(-\infty, 0)$ and positive for any point at $(0,\infty)$, thus it's local minimum
+2. If derivation of function $f$ at point before critical point positive and after is negative, then it's **local maximum**. For example function $f(x) = -x^2$ with derivation $f'(x) = -2x$ has critical point at $x=0$ and forming two intervals,  $(-\infty, 0)\cup(0,\infty)$. The function derivation is positive for any point at $(-\infty, 0)$ and negative for any point at $(0,\infty)$, thus it's local minimum
+
+#### Concativity
+**Concavity** is a turning or bending of tangets slope over some interval. 
+1. Function is **concave down** if slope of tangent decreases as we move from left to right over some interval $I$ or if secant between points $a$ and $b$ in interval $I$ is below curve. Mathematicaly, if $f'(x)$ <u>is decreasing</u> over open interval $I$, then function is concave. Having curve $x^3$, $f'(x)$ is decreasing from $(-\infty, 0)$ when coming from left to right
+2. Function is **concave up (convex)** if slope of tangent increases as we move from left to right over some interval $I$ or if secant between points $a$ and $b$ in interval $I$ is above curve. Mathematicaly, if $f'(x)$ <u>is increasing</u> over open interval $I$, then function is convex. Having curve $x^2$, $f'(x)$ is increasing either from $(-\infty, 0]$ or $[0, \infty)$ when coming from left to right
+![[Pasted image 20260917114529.png|434]]
+
+To determine concavity, we apply mean value theorem on first derivation $f'(x)$, similarly as we did for determining if function $f(x)$ is increasing or decreasing. 
+1. if $f''(x) > 0$, then function is **convex** over interval $I$
+2. if $f''(x) < 0$, then function is **concave down** over interval $I$
+
+**Inflection point** is point where function changes concavity. Such point has either second derivation $f''(c)$ equal to 0 or second derivation is not defined at $f''(c)$.
+1. If second derivation is changes from positive at point before inflection point to negative at point after inflection point, then it's function is changing from convex to concave
+2. If second derivation is changes from negative at point before inflection point to positive at point after inflection point, then it's function is changing from concave to convex
+3. If signess of points before and inflection point is not changing, then it's not an inflection point
+Example of inflection point is $f(x) = x^3$, $f''(x) = 6x$, $c = 0$, $f''(x)$ at $(-\infty , 0)<0$ and  $f''(x)$ at $(0 ,\infty)>0$, function is changing from concave to convex.
+
+**Second derivation local extreme test** is method to determine if critical point is an extreme
+1. if $f'(c) = 0$ and $f''(x) < 0$, then it's a local maximum, because $f'(x)$ is decreasing towards $f'(c)$, forming $\cap$ shape
+2. if $f'(c) = 0$ and $f''(x) > 0$, then it's a local minimum, because $f'(x)$ is increasing towards $f'(c)$, forming $\cup$ shape
+3. if $f'(c) = 0$ and $f''(x) = 0$, then test fails, it's either an local minimum, maximum or non of that
+
+Using critical points, inflection points and asymptotes, we can accurately sketch a graph
+
+#### Newton appromixation 
+Newton approximation is a method of finding roots of equation by approximation, assuming that function is contineous and have solution.  Process consists of
+1. Picking random point on function $f$ where we think root could be
+2. Compute tanget at point
+3. Find intersection $x_n$ of tangent with $x$ axis
+4. If $x_n$ on function $f$ doesn't have value acceptably close to 0, repeat step 2 with $x_n$
+> [!info]
+> Netwton approximation will find only single solution. Which solution is found does depend on initial point $x_0$
+   
+> [!warning]
+> Process could fail, for example if point $x_0$ has distance between tanget $f(x_0) - h$ and $x_1$ has distance between tanget $f(x_1) + h$ that is same as $|f(x_0) - h|$, thus new points will cycle between $x_0$ and $x_1$.
+
+For example, having function $f(x)=x^2-2$ we assume, that root is on $x_0=2$, which is not $f(2) = 2$. Intersection $x_1$ of tanget on $(x_0, f(x_0))$ which approximation of $y=0$ is close to root, but not Intersection $x_2$ of tanget on $(x_1, f(x_1))$ which approximation of $y=0$ is really close to root (geogebra thinks that it's 0), So we can accept $x=1.42$ as solution for equation $x^2 -2 = 0$
+![[Pasted image 20260918133826.png|409]]
+#### Antiderivatives
+Antiderivative is function, that is inverse derivative, e.g function, recovered from it's derivative. Such function is denoted as capital $F(x)$. Since constant is removed during derivation, then we have infinity amount of solution in form $y = F(x) + C$, where C is a constant and $F(x)$ is antiderivative. Some antiderivative formulas can derived from derivates.
+
+Antiderivative formulas:
+1. $x^n = \dfrac{1}{n+1}x^{n+1}$
+2. $sin(kx) = -\dfrac{1}{k}cos(kx)$
+3. $cos(kx) = -\dfrac{1}{k}cos(kx)$
+4. $kf(x) = kF(x)$
+5. $f(x) + g(x) = F(x) + G(x)$
+
+**Differential equation** is equation in form $\dfrac{dy}{dx} = f(x)$, since by derivation of uknown function $y$ (this is the reason why it's called equation) we will get $f(x)$ (it's derivation). Since during differentation there could be arbitrary constant, we also have to know **initial value** in form $y(x_0) = y$ to restore removed constant. Differential equation and initial value forms **initial value problem**, which we can solve knowing both. **General solution** for differential equation is function in form $y = F(x) + C$,
+
+**Indefinite integral** is a collection all <u>general solutions</u> for differential equation. Integral is denoted with $\int{f(x)dx}$, where $\int$ is a symbol of integration, $f(x)$ is **integrand** and $x$ is a **variable of integration**. 
