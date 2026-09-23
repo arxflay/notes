@@ -38,4 +38,10 @@ Unstructured task list
 - [ ] https://en.wikipedia.org/wiki/Alternating_series
 - [ ] https://github.com/opencontainers/image-spec
 - [ ] Cramers rule
-- [ ] https://github.com/openagents-org/openagents
+- [ ] Opencode
+- [ ] Ollama
+- [ ] https://libfuse.github.io/doxygen/
+- [ ] https://linuxhandbook.com/inode-linux/
+- [ ] WebView2
+- [ ] Assembly manifests
+- [ ] https://www.khronos.org/openxr/

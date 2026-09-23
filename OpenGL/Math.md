@@ -91,3 +91,6 @@ Example $\dfrac{x^3 + x^2 - 5}{x^2 - 2x + 3}$
 
 **Cusp**: curve, that separates into two branches having tangent on the same point for both branches. Example: $\sqrt{|{x}|}$
 ![[Pasted image 20260830111628.png]]
+
+
+**Odd form**: any odd number in $\mathbb{N}$ can be written as $2p+1$, since $p \in \mathbb{N}$ is even and adding 1 will make it odd

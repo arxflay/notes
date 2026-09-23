@@ -210,8 +210,10 @@ Antiderivative formulas:
 1. $x^n = \dfrac{1}{n+1}x^{n+1}$
 2. $sin(kx) = -\dfrac{1}{k}cos(kx)$
 3. $cos(kx) = -\dfrac{1}{k}cos(kx)$
-4. $kf(x) = kF(x)$
-5. $f(x) + g(x) = F(x) + G(x)$
+4. $sec^2(kx) = \dfrac{1}{k}tan(kx)$
+5. $csc^2(kx) = -\dfrac{1}{k}cot(kx)$
+6. $kf(x) = kF(x)$
+7. $f(x) + g(x) = F(x) + G(x)$
 
 **Differential equation** is equation in form $\dfrac{dy}{dx} = f(x)$, since by derivation of uknown function $y$ (this is the reason why it's called equation) we will get $f(x)$ (it's derivation). Since during differentation there could be arbitrary constant, we also have to know **initial value** in form $y(x_0) = y$ to restore removed constant. Differential equation and initial value forms **initial value problem**, which we can solve knowing both. **General solution** for differential equation is function in form $y = F(x) + C$,
 
