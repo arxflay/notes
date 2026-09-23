@@ -1,0 +1,3 @@
+- During grammar correction task, do not change meaning of content even the written text is wrong or doesn't make any sense
+- Do not change formatting unless i asked you
+- Give me preview of changes before changing files, ask for permissionto apply changes before applying changes
