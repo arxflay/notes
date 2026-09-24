@@ -96,7 +96,7 @@ There are multiple ways to compute the determinant of a matrix depending on the 
 3. **For a $3 \times 3$ matrix**: the computation is similar to $2 \times 2$ by using Sarrus' rule, which is a special mnemonic where the matrix is extended by two rows. Compute 3 products of the left diagonal by moving one row down after each computation. In the same way, compute 3 products of the right diagonal. Subtract the 3 products of the left diagonal from the 3 products of the right diagonal.
 4. *For any matrix $(n\times n)$*: Computed as the sum of matrix cofactors (Laplace expansion), where the number of cofactors is equal to $n$. Cofactors are computed for either minors, where $j$ is always 1 and i ranges from 1 to $n$, or the other way around.
 
-![[Pasted image 20260812210945.png|449]]
+![[OpenGL/images/linear-algebra-determinant-methods.png|449]]
 
 The determinant of 2 vectors (2D matrix) is equal to the area of a parallelogram, and the determinant of 3 vectors (3D matrix) is equal to the volume of a parallelepiped   
 
@@ -206,7 +206,7 @@ Scaling along an arbitrary axis $\hat n$ (that passes through the origin) with s
 	$S_{\hat n} = \begin{bmatrix} 1 + n_x^2 (k - 1) & n_xn_y (k - 1) \\ n_xn_y (k - 1) & 1+ n_y^2 (k - 1)\end{bmatrix}$
 
 Computation is below
-![[Pasted image 20260808122450.png|610]]	
+![[OpenGL/images/linear-algebra-arbitrary-axis-scaling.png|610]]	
 We have to find vector $v'$, which is scaled along the axis
 1. $v' = v'_{perpendicular} + v'_{parallel}$, we just have to compute $v'_{perpendicular}$ and $v'_{parallel}$
 2. $v_{parallel}$ is on the same axis as $\hat n$; we can compute it by the dot product. 
@@ -238,9 +238,9 @@ A simple case of orthographic projection where one of the $k$ values for nonunif
 	$P_{x} = \begin{bmatrix} 1 & 0  \\ 0 & 0  \end{bmatrix}$ $P_{y} = \begin{bmatrix} 0 & 0  \\ 0 & 1  \end{bmatrix}$
 
 Projection of Z+ (Z+ is the top in Blender) to the XY plane 
-![[Pasted image 20260808125017.png|290]]
+![[OpenGL/images/linear-algebra-orthographic-projection-before.png|290]]
 How it really looks
-![[Pasted image 20260808125040.png|258]]
+![[OpenGL/images/linear-algebra-orthographic-projection-result.png|258]]
 #### Projection along arbitrary line (2D) or plane (3D)
 
 Derived from the matrix for scaling along an arbitrary axis, where k is replaced with 0 $P_{\hat n} = S(0, \hat n)$. However, the plane/line defined by vector $\hat n$ is perpendicular to $\hat n$ ($\hat n$ can be imagined as the axis from which we are looking at the object). The resulting plane passes through the origin
@@ -251,7 +251,7 @@ Derived from the matrix for scaling along an arbitrary axis, where k is replaced
 **2D orthographic projection matrix** (Can be applied for row and column vectors):
 	$P_{\hat n} = \begin{bmatrix} 1 - n_x^2 & -n_xn_y \\ -n_xn_y & 1- n_y^2\end{bmatrix}$
 	
-![[Pasted image 20260808172406.png|502]]
+![[OpenGL/images/linear-algebra-arbitrary-plane-projection.png|502]]
 
 ### Reflection ^cd089e
 
@@ -273,7 +273,7 @@ Reflection around an arbitrary axis can also be derived from the scaling matrix 
 **2D reflection matrix:
 	$R_{\hat n} = \begin{bmatrix} 1 - 2n_x^2 & -2n_xn_y \\ -2n_xn_y & 1 - 2n_y^2 \end{bmatrix}$
 	
-![[Pasted image 20260809141518.png|387]]
+![[OpenGL/images/linear-algebra-reflection-perpendicular-axis.png|387]]
 #### Reflection around parallel axis
 To rotate around a parallel axis, we have to negate the reflection matrix
 
@@ -283,13 +283,13 @@ To rotate around a parallel axis, we have to negate the reflection matrix
 **2D reflection matrix**:
 $R_{\hat n} = \begin{bmatrix} 2n_x^2 - 1 & 2n_xn_y \\ 2n_xn_y & 2n_y^2 - 1 \end{bmatrix}$
 
-![[Pasted image 20260809141959.png|389]]
+![[OpenGL/images/linear-algebra-reflection-parallel-axis.png|389]]
 
 ### Shearing
 Shearing is a rarely used transformation, also known as a **skew transform**, that skews (creates asymmetry in) an object, stretching it nonuniformly while preserving area and volume. It works by adding another vector component with a skew coefficient $s$ ($v_i = v_i + sv_j + ...$). For example, $x' = x + sy$, and $x$ is sheared by $sy$. 
 
 $x' = x + 1y$
-![[Pasted image 20260809152715.png|283]]
+![[OpenGL/images/linear-algebra-shearing.png|283]]
 
 Matrices for shearing are derived from $v_i = v_i + sv_j+...$; the letter below $H$ denotes which coordinate/s are being sheared. In 3D, it's possible to skew multiple coordinates by a single coordinate, having a coefficient for each coordinate
 

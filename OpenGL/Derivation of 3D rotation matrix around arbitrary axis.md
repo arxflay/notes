@@ -7,7 +7,7 @@ To determine vector $j'$, we need $j'_{perpendicular}$ and $j'_{parallel}$.
 4. The pair $j_{perpendicular}$ and $w$ will act like two axes (they are forming a 2D plane), where $w$ is opposite and $j_{perpendicular}$ is adjacent. Now we can compute the rotated vector $j'_{perpendicular}$ via $cos(\theta)*j_{perpendicular} + sin(\theta) * w$
 5. With this, we can compute $j' = j'_{parallel} + j'_{perpendicular}$
 
-![[Pasted image 20260807175715.png|418]]
+![[OpenGL/images/linear-algebra-arbitrary-axis-rotation.png|418]]
 
 Now all of this must be converted to a matrix, which can be applied to any vector
 1. $j' = j'_{parallel} + j'_{perpendicular}$

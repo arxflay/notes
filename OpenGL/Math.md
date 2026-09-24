@@ -10,7 +10,7 @@ line slope formula:  $tan(\theta) = \dfrac{y}{x}$, where y or x are either vecto
 
 bounding box: a box around an object in two variants:
 1. two coordinates ($x_1, y_1$) $(x_2, y_2)$ (named xyxy) or a single coordinate + width and height 
-   ![[Pasted image 20260724115028.png|265]]
+   ![[OpenGL/images/math-oriented-bounding-box.png|265]]
 2. $c$ center and $a$ positional vector (oriented bounding box)
 ### Set-builder notation
 Set-builder notation is $\set{expression|condition}$, which can be read as the returned set created by $expression$ restricted by $condition$. If the set of numbers for a variable in $expression$ is not specified, it's assumed that the set of variables is the set of $\mathbb{R}$ numbers; otherwise, it must be specified in the expression block $\set{x \in \mathbb{R}}$ or as a condition $\set{x |x \in \mathbb{R}}$. The syntax is similar to Python list comprehension 
@@ -74,7 +74,7 @@ How it works:
 5. If the dividend term is higher than the remaining term, then the remaining polynomial is the remainder. The result is written as
 
 Example $\dfrac{x^3 + x^2 - 5}{x^2 - 2x + 3}$
-![[Pasted image 20260829000544.png|383]]
+![[OpenGL/images/math-polynomial-division.png|383]]
 ## Unordered
 
 **Euclidean division** is division with a remainder. Using Euclidean division, we can represent each divisor as the quotient multiplied by the dividend and summed with the remainder: $a = nq + r$, where n is the dividend, q is the quotient, and r is the remainder.
@@ -82,7 +82,7 @@ Example $\dfrac{x^3 + x^2 - 5}{x^2 - 2x + 3}$
 **GCD**: since the common divisor of $A$ is equal to the common divisor of $A -B$, we can subtract B until B is equal to A. If $B$ is bigger than $A$, then we swap $A$ with $B$. Subtracting B from A is slow, so we can use another method using division with a remainder. The principle is similar: check the remainder until $A\ mod\ B$ is zero; otherwise, set A as B and B as the remainder. It works because it is essentially the same as the algorithm with $A - B$
 
 **Pascal's triangle**: A triangle that forms rows, where each entry is the sum of the two immediately above it. The triangle starts with $1$. Entries from Pascal's triangle form the combination $\begin{pmatrix} n \\ k \end{pmatrix}$, where $n$ is the number of the row from 1 and $k$ is the entry.
-![[Pasted image 20260830132931.png|411]]
+![[OpenGL/images/math-pascals-triangle.png|411]]
 
 **Monomial**: A polynomial that contains only a single term, e.g., $x^2$, $-ax$, etc.
 **Binomial**: A polynomial that is the sum of two terms, where each term is a monomial 
@@ -90,7 +90,7 @@ Example $\dfrac{x^3 + x^2 - 5}{x^2 - 2x + 3}$
 **Binomial difference factorization**: $x^{n+1} - y^{n+1} = (x-y) * (\sum_{k=0}^nx^ky^{n-k})$, for example $x^3 - y^3 = x^{2 + 1} - y^{2 + 1} = (x - y)*(x^0*y^2 + x^1*y^1 + y^0*x^2) = (x - y)*(y^2 + xy + x^2)$
 
 **Cusp**: a curve that separates into two branches having a tangent at the same point for both branches. Example: $\sqrt{|{x}|}$
-![[Pasted image 20260830111628.png]]
+![[OpenGL/images/math-cusp.png]]
 
 
 **Odd form**: any odd number in $\mathbb{N}$ can be written as $2p+1$, since $p \in \mathbb{N}$ is even and adding 1 will make it odd

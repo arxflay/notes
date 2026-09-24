@@ -28,7 +28,7 @@ reverse formulas:
 4. $arccot(a/o) = \theta$
 
 example task:
-![[Pasted image 20260610210400.png|417]]
+![[OpenGL/images/triangles-trigonometry-example.png|417]]
 
 table of known trigonometric values
 
@@ -51,23 +51,23 @@ $x\ trignometric\_fn^p(z * \theta)$
 Unit circle - a circle with radius 1, which is used to describe trigonometric functions past $90$ degrees (because the length of the hypotenuse is always 1). This works with smaller or bigger triangles (which have a hypotenuse bigger than 1) because these triangles are similar. 
 
 basic trigonometric functions graphs (y is $\cos$ and x is $\sin$): 
-![[Pasted image 20260620123440.png|520]]
+![[OpenGL/images/triangles-unit-circle-functions.png|520]]
 
 Precise visualization of trigonometric functions on a triangle (sec is the line from A to D)
-![[Pasted image 20260910163343.png|354]]
+![[OpenGL/images/triangles-unit-circle-all-functions.png|354]]
 
 Another visualization using a tangent to a point on a curve
-![[Pasted image 20260910163755.png|363]]
+![[OpenGL/images/triangles-unit-circle-tangent-secant.png|363]]
 
 Angles for each quadrant (can be proved by angle of intersecting lines):
 1. $\theta$
 2. $\pi - \theta$
 3. $\theta - \pi$
 4. $2\pi - \theta$
-![[Pasted image 20260627132320.png|324]]
+![[OpenGL/images/triangles-quadrant-reference-angles.png|324]]
 
 reverse functions graphs:
-![[Pasted image 20260620154550.png|504]]
+![[OpenGL/images/triangles-inverse-trigonometric-graphs.png|504]]
 
 
 ### Trigonometric identities (right triangle axioms)
@@ -91,17 +91,17 @@ reverse functions graphs:
 1. $cos(-\theta) = cos(\theta)$ 
    because the cosine function is the same if the angle is negative
    proved by reflection (the adjacent side is always -3)
-   ![[Pasted image 20260627122621.png|209]]
+   ![[OpenGL/images/triangles-cosine-reflection.png|209]]
 2. $sin(-\theta) = -sin(\theta)$
    the sine function is reversed.
    proved by reflection ($opposite$ points to positive y but $opposite_{reflected}$ points to negative y)
-   ![[Pasted image 20260627123107.png|244]]
+   ![[OpenGL/images/triangles-sine-reflection.png|244]]
    
 3. $tan(-\theta) = -tan(\theta)$ and $cot(-\theta) = -cot(\theta)$
    similar to sine
 4. $sin(\dfrac{\pi}{2} + \theta) = cos(\theta)$
    proof (y = 3 on the right, x = 3 on the left), when extending the angle by $90\textdegree$, y will be -3 on the bottom triangle and x = -3 on the top
-   ![[Pasted image 20260627132753.png|266]]
+   ![[OpenGL/images/triangles-angle-shift.png|266]]
 5. $cos(\dfrac{\pi}{2} + \theta) = -sin(\theta)$
    same proof as in previous image
 There are other derivatives, but they can be simply derived from the function graph or by reflection
@@ -110,7 +110,7 @@ There are other derivatives, but they can be simply derived from the function gr
 1. $sin(A \pm B) = sin(A) * cos(B) \pm cos(A) * sin(B)$
 2. $cos(A \pm B) = cos(A) * cos(B) \mp sin(A) * sin(B)$
 visual proofs for sine and cosine ([using a Wikipedia article](https://en.wikipedia.org/wiki/Proofs_of_trigonometric_identities#Angle_sum_identities)) 
-   ![[Pasted image 20260703171224.png]]
+   ![[OpenGL/images/triangles-angle-sum-identities-proof.png]]
 3. $tan(A \pm B) = \dfrac{tan(A) \pm tan(B)}{1 \mp tan(A)*tan(B)}$
 4. $cot(A \pm B) = \dfrac{cot(A)*cot(B) \mp 1 }{cot(B) \pm cot(A)}$
 
@@ -118,7 +118,7 @@ visual proofs for sine and cosine ([using a Wikipedia article](https://en.wikipe
 1. $sin(z*\theta) = 2sin(\dfrac{z}{2}\theta)* cos(\dfrac{z}{2}\theta)$
     can be derived from $sin(A + B)$ $sin(z*\theta) = sin(\dfrac{z}{2}\theta + \dfrac{z}{2}\theta) = sin(\dfrac{z}{2}\theta) * cos(\dfrac{z}{2}\theta) + sin(\dfrac{z}{2}\theta) * cos(\dfrac{z}{2}\theta) = 2sin(\dfrac{z}{2}\theta) * cos(\dfrac{z}{2}\theta)$
     visual proof with the same isosceles triangles with two different orientations
-    ![[Pasted image 20260703153827.png|314]]
+    ![[OpenGL/images/triangles-double-angle-sine-proof.png|314]]
 2. $cos(z*\theta) = cos^2(\dfrac{z}{2}\theta) - sin^2(\dfrac{z}{2}\theta)$
     can be derived from $cos(A + B)$
     $cos(z*\theta) = cos(\dfrac{z}{2}\theta + \dfrac{z}{2}\theta) = cos(\dfrac{z}{2}\theta) * cos(\dfrac{z}{2}\theta) - sin(\dfrac{z}{2}\theta) * sin(\dfrac{z}{2}\theta) = cos^2(\dfrac{z}{2}\theta) - sin^2(\dfrac{z}{2}\theta)$
@@ -145,14 +145,14 @@ visual proofs for sine and cosine ([using a Wikipedia article](https://en.wikipe
 If we have an angle in radians and $|\theta|$ is the length of the arc, then
 1. $-|\theta| \le sin(\theta) \le |\theta|$
 2. $-|\theta| \le 1 - cos(\theta) \le |\theta|$
-![[Pasted image 20260820141231.png|268]]
+![[OpenGL/images/triangles-trigonometric-inequalities.png|268]]
 ### Triangle identities
 1. Triangle inequality - a figure is not a triangle if one of the three sides is bigger than the sum of the other two sides
 2. the sum of the angles of a triangle must always be 180
 3. Law of sine
    $\dfrac{a}{sin(A)} = \dfrac{b}{sin(B)} = \dfrac{c}{sin(C)}$
    proved by division of a triangle 
-   ![[Pasted image 20260614210709.png|332]]
+   ![[OpenGL/images/triangles-law-of-sines-proof.png|332]]
    To apply the law of sines, we must know at least 2 sides and the angle between one of these sides or two angles and one side that is close
 4. Law of cosine
    $c^2 = a^2 + b^2 - 2ab * cos(C)$
@@ -168,4 +168,4 @@ If we have an angle in radians and $|\theta|$ is the length of the arc, then
 	$(2a * cos(\theta) - b) * b = (a-c) * (c + a)$
 	$2ab*cos(\theta) - b^2 = a^2 - c^2$
 	$c^2 = a^2 + b^2 - 2ab *cos(\theta)$
-	![[Pasted image 20260615202502.png|437]]
+	![[OpenGL/images/triangles-law-of-cosines-proof.png|437]]

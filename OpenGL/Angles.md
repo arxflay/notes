@@ -1,17 +1,17 @@
 supplementary angle = two angles that make 180 degrees
 
-![[Pasted image 20260611212417.png|408]]
+![[OpenGL/images/angles-supplementary.png|408]]
 
 complementary angle = two angles that make 90 degrees
 
-![[Pasted image 20260611212913.png|251]]
+![[OpenGL/images/angles-complementary.png|251]]
 
 bisector = division of an angle into two angles with equal measures
 
-![[Pasted image 20260613154905.png|280]]
+![[OpenGL/images/angles-bisector.png|280]]
 
 subtended angle - angle at which we can see an object
-![[Pasted image 20260614210022.png|334]] ^89a7a9
+![[OpenGL/images/angles-exterior-angle.png|334]] ^89a7a9
 
 interior angle - angle inside a shape
 exterior angle - angle outside of a shape formed by extending a side
@@ -26,7 +26,7 @@ secant - similar to a chord, but the line is outside
 
 inscribed angle - angle inside a circle that is between a point and two points of a chord
 central angle - angle inside a circle that is the angle between two points and a point on the circle. The angle will be equal to double the inscribed angle
-![[Pasted image 20260614210628.png|358]]
+![[OpenGL/images/angles-inscribed-and-central.png|358]]
 
 
 
@@ -39,17 +39,17 @@ The sum of the angles in a triangle is equal to 180
 
 So $\alpha + (\alpha + \beta) + \beta = 180$ (the third angle created at point A by bisecting the triangle is not important because we compute angles for the whole triangle)
 $\alpha + \beta = 90$
-![[Pasted image 20260614123212.png|444]]
+![[OpenGL/images/angles-thales-theorem.png|444]]
 
 ### Subtended angle
 ^subtended-angle
 The angle subtended by an arc is always the same. That means that if we pick another point on the circle that creates a subtended angle, the angle will be the same no matter where we put the point on the circle ^8de587
 
 subtended by Arc A
-![[Pasted image 20260615192725.png|361]]
-![[Pasted image 20260615192754.png|362]]
+![[OpenGL/images/angles-subtended-arc-a-first.png|361]]
+![[OpenGL/images/angles-subtended-arc-a-second.png|362]]
 Subtended by Arc B
-![[Pasted image 20260615193034.png|362]]
+![[OpenGL/images/angles-subtended-arc-b.png|362]]
 
 the angle between two points in a circle is defined as $\theta = s/r$ where s is the arc length  and r is the radius
 
@@ -61,7 +61,7 @@ $C = 2\pi r$
 $s = \theta *r$ | $2\pi r = \theta * r$ | $2\pi = \theta$ 
 from this formula, we can determine the angle of a single radian. We know that $\theta$ of a full circle is 360, so $2\pi x = 360$ | x = $360 / 2\pi = 57.29\ degrees$
 
-![[Pasted image 20260610232634.png|467]]
+![[OpenGL/images/angles-radian-circle.png|467]]
 we know that pi is 180, so we can convert radians to degrees using the formula $rad * \dfrac{180}{\pi}$
 A radian can be approximated by creating a circle of radius $r$ at the right end of the circle from the center, finding the intersection, and then bisecting from the left a few times
-![[Pasted image 20260823135857.png|310]]
+![[OpenGL/images/angles-radian-construction.png|310]]

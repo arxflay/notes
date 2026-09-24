@@ -1,7 +1,7 @@
 **Differentiation** is the process of finding the derivative of a function. **The derivative at point $x_0$** is interpreted as the slope of the tangent to a curve at point $x_0$ (instantaneous rate) or the slope of the secant $x_0$ at $P(x_0, f(x_0))$. Mathematically, it is defined as the limit of the instantaneous rate where $h$ approaches zero.
 $f'(x_0) = \lim_{h \to 0} \dfrac{f(x_0 + h) - f(x_0)}{h}$, $x_0$ emphasizes that we are computing the derivative of a function at point $x_0$. If such a limit doesn't exist, that means that the derivative of the function doesn't exist at point $x_0$
 Example of the derivative at point $x_0$, where the slope of the tangent is $f'(x_0)$
-![[Pasted image 20260830114654.png|494]]
+![[OpenGL/images/calculus-derivative-at-point.png|494]]
 
 **The derivative of a function** has the same formula as the derivative of a function at a point; only $x_0$ is replaced with $x$ to emphasize that we can use an arbitrary x
 $f'(x) =  \lim_{\Delta x \to 0} \dfrac{\Delta y}{\Delta x} \lim_{h \to 0} \dfrac{f(x + h) - f(x)}{h}$
@@ -27,11 +27,11 @@ Differentiation can be split into right and left differentiation, denoted as $\l
 
 Some cases where it's not possible to differentiate:
 1. Oscillating $sin(1/x)$
-    ![[Pasted image 20260823173731.png|328]]
+    ![[OpenGL/images/calculus-oscillating-discontinuity.png|328]]
 2. Different behavior on the left and right sides (Point 0,0). $f(x) = |x|$
 	$\lim_{h \to 0+} \dfrac{x + h - x}{h} = 1$
 	$\lim_{h \to 0-} \dfrac{-x - h + x}{h} = -1$
-	![[Pasted image 20260829175000.png|222]]
+	![[OpenGL/images/calculus-absolute-value-nondifferentiable.png|222]]
 3. Discontinuity
 
 
@@ -123,7 +123,7 @@ Example of the linearization of $cos(x)$ at point $a=\dfrac{\pi}{6}$.
 $f(a) = cos(\dfrac{\pi}{6}) = \dfrac{\sqrt{3}}{2}$, $f'(a) = -sin(x)\Bigg|_{x=\dfrac{\pi}{6}} = -1/2$, $L(x) = \dfrac{\sqrt{3}}{2} + \dfrac{1}{2}(x - 3)$
 **A differential** is an infinitely small change (very small change) in a quantity; for example, an infinitely small change in $x$ is denoted as $dx$. We can relate multiple changes to each other (creating a differential change) using derivatives, where $dx$ is an independent variable and $dy$ is a dependent variable that depends on $x$ and $dx$ in the form $dy = f'(x) * dx$. This form is derived by assuming that if $dx$ is equal to $\Delta x$ and $x = a$, then $dy$ is a change in $y$ in the linear function at $a$ by the amount $\Delta L = L(a + dx) - L(a) = f'(a)*dx$; in other words, if $dx$ is some distance from $a$, then $dy$ is the distance of $y$ on linear function L between $a$ and $a + dx$. Sometimes the form $df = f'(x)dx,$ is used, where a function is in place of f, for example $d(sin(x)) = cos(x) dx$. <u>All formulas for derivatives can be applied to differentials</u>. 
 Example: having the curve $x^2$ and $a = 3$, we have the linear function $L(x) = 6x(-3) + 9$ with point $(3,9)$. If $dx$ is equal to $0.5$, then $dy = \Delta L = f'(3)*0.5 = 6*0.5 = 3$
-![[Pasted image 20260912120510.png|346]]
+![[OpenGL/images/calculus-linearization-differential.png|346]]
 
 By dividing the whole $dy$ by $dx$, we will get $\dfrac{dy}{dx} = f'(x)$, which is used to denote derivatives.
 
@@ -140,7 +140,7 @@ Using this notation, we can compute $\Delta y$ as $f'(a) + \epsilon \Delta x$, w
 
 **Local extremes** are local maxima or minima at an interior point $c$ where, for all $x$ in $D$, including $c$, either $f(c) \ge f(x)$ (maximum) or $f(c) \le f(x)$ (minimum) in some interval. Global extremes are also local extremes.
 Examples of local extremes of the function $cos(x)$ with domain $(-\infty, \infty)$ in the interval $<-\pi/2, \pi/2>$ are the local minimum $0$ and the local maximum $1$
-![[Pasted image 20260914224149.png|371]]
+![[OpenGL/images/calculus-local-extrema-cosine.png|371]]
 
 **Theorem of the first derivative for local extremes**: if there is an interior point $c$ which is a local maximum or minimum, then its derivative $f'(c)$ is equal to $0$
 
@@ -149,13 +149,13 @@ Extremes could exist at:
 2. end points of domain
 3. points where the derivative is not defined.
 Interior points where $f'(x)$ is zero or the derivative is not defined are called **critical points**; however, not all critical points are local extremes. For example, the function $x^3$ with derivative $3x^2$ has $f'(x) =0$ at $x=0$, but it's not an extreme. The function $x^{1/3}$ with derivative $\dfrac{1}{3x^{2/3}}$ is not defined at $0$, but it's also not an extreme. 
-![[Pasted image 20260915161352.png|257]] ![[Pasted image 20260915161500.png|261]]
+![[OpenGL/images/calculus-x-cubed-critical-point.png|257]] ![[OpenGL/images/calculus-cube-root-critical-point.png|261]]
 
 **Rolle's theorem**: if there are two points, $a$ and $b$, for which $f(a) = f(b)$, e.g., there is a horizontal line between them, then in $(a,b)$ there is at least one point $c$ at which the derivative is equal to $0$
 
 **Mean value theorem**: if we have a function f and two points, $a$ and $b$, which form a secant, and it is differentiable on the interval $(a, b)$, then there is at least one point $c$ which has the same slope as the secant, e.g., $\dfrac{f(b) - f(a)}{b - a} = f'(c)$
 This could be proved by Rolle's theorem. Having the secant function $g(x) = f(a) + \dfrac{f(b) - f(a)}{b - a}(x - a)$, the vertical difference between $f$ and $g$ at $x$ is $h(x) = f(x) - g(x) = f(x) - f(a) - \dfrac{f(b) - f(a)}{b - a}(x - a)$.  If we create a diagram of $h(x)$, it will form a function with two points, $a$ and $b$, which have the same $y$ value. Rolle's theorem tells us that there is some point where $h'(c)$ is equal to $0$. By differentiating both sides of the function $h'(x)$, we will get $h'(x) = f'(x) - \dfrac{f(b) - f(a)}{b - a}$ (note: we are differentiating with respect to $x$, so $a$, $f(a)$ and $f(b)$ are constants). Then we set $x$ to $c$, $0 = f'(c) - \dfrac{f(b) - f(a)}{b - a}$, and so $f'(c) = \dfrac{f(b) - f(a)}{b - a}$
-![[Pasted image 20260915170200.png|409]]
+![[OpenGL/images/calculus-mean-value-theorem.png|409]]
 
 Mean value theorem consequences:
 1. Only constant functions have zero derivatives over an interval, since $\dfrac{f(b) - f(a)}{b - a}$ will always be zero, so $f'(c) = 0$
@@ -170,7 +170,7 @@ Mean value theorem consequences:
 **Concavity** is a turning or bending of the tangent's slope over some interval. 
 1. A function is **concave down** if the slope of the tangent decreases as we move from left to right over some interval $I$ or if the secant between points $a$ and $b$ in interval $I$ is below the curve. Mathematically, if $f'(x)$ <u>is decreasing</u> over an open interval $I$, then the function is concave. Having the curve $x^3$, $f'(x)$ is decreasing from $(-\infty, 0)$ when going from left to right
 2. A function is **concave up (convex)** if the slope of the tangent increases as we move from left to right over some interval $I$ or if the secant between points $a$ and $b$ in interval $I$ is above the curve. Mathematically, if $f'(x)$ <u>is increasing</u> over an open interval $I$, then the function is convex. Having the curve $x^2$, $f'(x)$ is increasing either from $(-\infty, 0]$ or $[0, \infty)$ when going from left to right
-![[Pasted image 20260917114529.png|434]]
+![[OpenGL/images/calculus-concavity.png|434]]
 
 To determine concavity, we apply the mean value theorem to the first derivative $f'(x)$, similarly to how we determined if the function $f(x)$ is increasing or decreasing. 
 1. if $f''(x) > 0$, then the function is **convex** over the interval $I$
@@ -202,7 +202,7 @@ Newton approximation is a method of finding the roots of an equation by approxim
 > The process could fail, for example, if point $x_0$ has a distance between the tangent $f(x_0) - h$ and $x_1$ has a distance between the tangent $f(x_1) + h$ that is the same as $|f(x_0) - h|$; thus, new points will cycle between $x_0$ and $x_1$.
 
 For example, having the function $f(x)=x^2-2$, we assume that the root is at $x_0=2$, which is not $f(2) = 2$. The intersection $x_1$ of the tangent at $(x_0, f(x_0))$, whose approximation of $y=0$ is close to the root, but not the intersection $x_2$ of the tangent at $(x_1, f(x_1))$, whose approximation of $y=0$ is really close to the root (GeoGebra thinks that it's 0). So we can accept $x=1.42$ as a solution to the equation $x^2 -2 = 0$
-![[Pasted image 20260918133826.png|409]]
+![[OpenGL/images/calculus-newton-approximation.png|409]]
 #### Antiderivatives
 An antiderivative is a function that is an inverse derivative, e.g., a function recovered from its derivative. Such a function is denoted as capital $F(x)$. Since a constant is removed during differentiation, we have an infinite number of solutions in the form $y = F(x) + C$, where C is a constant and $F(x)$ is an antiderivative. Some antiderivative formulas can be derived from derivatives.
 

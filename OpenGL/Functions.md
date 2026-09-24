@@ -8,7 +8,7 @@ Types of function mapping:
 3. **Bijection** (one-to-one and onto): combination of injection and surjection - only one mapping of an element from the domain to an element from the range exists, and each element from the range is mapped
 4. **General mapping**: no restrictions
 There is a visualization using arrow mappings:
-![[Pasted image 20260814150543.png|430]]
+![[OpenGL/images/functions-mapping-types.png|430]]
 
 **Piecewise function**: a function that is partitioned into some intervals, e.g., it is different in some parts depending on some conditions. Examples are the absolute value $|a|$ function, the **floor** function (which always rounds to the smallest integer), or **ceil** (which always rounds to the bigger integer). Piecewise function notation consists of an open curly brace, which contains the function value mapping (which can be an expression or variable) for a specific interval. Example: 
 $sign(x) = \begin{cases}1 & x > 0 \\ 0 & x = 0 \\ -1 & x < 0\end{cases}$

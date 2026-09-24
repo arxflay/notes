@@ -4,10 +4,10 @@ The volume of a box is $V = h*l*w$, where $h$ is the height, $l$ is the length, 
 
 **area of a triangle** = $\dfrac{b * h}{2}$ where b is the base and h is the shortest height to the base
 
-![[Pasted image 20260703153750.png|161]]
+![[OpenGL/images/geometry-triangle-area.png|161]]
 
 **area of a parallelogram** formula is derived from the previous formula (a parallelogram is created from two triangles) = $b*h$
-![[Pasted image 20260721160047.png|332]]
+![[OpenGL/images/geometry-parallelogram-area.png|332]]
 which is related to the area of a rectangle, since cutting a right-angled triangle and placing it on the other side will form a rectangle, whose area formula is $a * b$
 
 **Circle circumference** is the line around a circle (defining the whole circle). It is computed via $2\pi r = C$ (r is repeated $2 \pi$ to form a circle)
@@ -16,7 +16,7 @@ which is related to the area of a rectangle, since cutting a right-angled triang
 
 **Circle area**: the formula is $A = \dfrac{1}{2} 2\pi r^2 = \pi r^2$, which can be imagined as $r^2$ half of the square repeated $\pi$ times.
 example with $r = 4$
-![[Pasted image 20260821170015.png|350]]
+![[OpenGL/images/geometry-circle-area-square-ratio.png|350]]
 The circle's area is equal to ~$80$ % of the area of the square with side lengths equal to the diameter of the circle, so $A \approx \dfrac{4}{5}d^2$
 
 **A circle sector** is a closed region formed inside a circle from the center and two points on the circle (disk). Typical types are a half-disk ($180 \textdegree$), quadrant ($90 \textdegree$), and sextant ($60\textdegree$)
