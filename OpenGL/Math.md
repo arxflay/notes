@@ -60,6 +60,19 @@ Additive inverse - an element in a group that is the inverse of a number, which,
 	  $expression < -a$ or $expression > a$
 4. For a square root, the solution is a combination of intervals (we have to compute valid intervals for each expression under the square root)
 
+## **Sum notation**
+Sum notation $\sum_{k=j}^n expression$ is a way to represent a sum of integers (similar to a for loop in programming languages), where $k$ is a variable that is incremented by 1, $j$ is the initial value of $k$, and $n$ is the count.  Each time $k$ is incremented by $1$, the $expression$ is added to the total sum $k$. $k$ is incremented until it is bigger than the number $n$ at the top.
+
+Common formulas:
+1. $\sum_{k=1}^n c = c*n$
+2. $\sum_{k=1}^n ck = c\sum_{k=1}^n k$
+3. $\sum_{k=1}^n (k\pm k) = \sum_{k=1}^n k \pm \sum_{k=1}^n k$
+
+To simulate an increment by an integer that is not equal to $1$, $n$ is extended/shrunk, and $k$ is multiplied by $c$, which is some integer by which $k$ is incremented. $\sum_{k=1}^n 2k$ will give increments of 2.
+### Common sums represented as equations
+Sum of subsequent integers: $\sum_{k=1}^{n}k=\dfrac{n(n+1)}{2}$
+Sum of subsequent  squares: $\sum_{k=1}^{n}k^2=\dfrac{n(n+1)(2n+1)}{6}$
+Sum of  subsequent cubes: $\sum_{k=1}^{n}k^3=(\dfrac{n(n+1)}{2})^2$
 ## Polynomials
 
 **Conjugate**: an expression where the sign between two terms is changed. Conjugates are useful when we want to remove a square root from the numerator (top part) or denominator (bottom part) or simplify an equation. Example: $\dfrac{5 + \sqrt{x}}{\sqrt{x}} = \dfrac{5 + \sqrt{x}}{\sqrt{x}} * \dfrac{5 - \sqrt{x}}{5-\sqrt{x}} = \dfrac{25 - x^2}{5\sqrt{x} - x^2}$`

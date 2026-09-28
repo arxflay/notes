@@ -25,6 +25,10 @@ The area of a circle sector is derived from the formula for the area of a circle
 **The volume of a cylinder** is $V=\pi r^2h$ (imagine it as the area of a circle expanded by height $h$)
 
 $1$ liter = $1000cm^3$
+
+**The area of a trapezoid (trapezium)** is $\dfrac{1}{2}(a+b)h$, which is derived from the area of a triangle by extending one side by the other side and forming a triangle where $h$ starts.
+![[OpenGL/images/geometry-trapezoid-area-derivation.png]]
+
 ## Chord intersection theorem
 
 ^00d4f6
